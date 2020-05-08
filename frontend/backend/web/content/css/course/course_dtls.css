@@ -1,0 +1,129 @@
+.nav>li.active{ border-left:0;}
+#down {color:blue;text-decoration:none;}
+#down:hover {color:red;text-decoration:underline;}
+#changeLesson {color:blue;text-decoration:none;}
+#changeLesson:hover {color:red;text-decoration:underline;}
+.vedio-tab{margin: 6px 10px;padding: 0 8px;box-shadow: none;min-width: 100px;line-height: 32px;}
+.magic-radio + label:after {top: 6px;left: 6px;}
+.btnsquar.btn-bg-white {color: #333;background-color: #f6f6f6;border: 1px solid #ccc;}
+
+.max-width700{
+    padding-bottom: 20px;
+}
+
+/*在线学习样式*/
+.header {
+    height:60px;
+    background: #cc1c1e;
+}
+.h-md-logo{
+    position: absolute;
+    top:9px;
+    left: 0;
+}
+.h-md-center{
+    position: relative;
+    max-width: 1171px;
+    height:60px;
+    margin: 0 auto;
+}
+.logo_tit{
+    height:40px;
+    line-height: 40px;
+    color: #fff;
+    padding:0 0 0 45px;
+    background: url("/content/images/learn.png") no-repeat 0 center;
+}
+.logo_tit p{
+    font-family: "Microsoft YaHei";
+    font-size: 22px;
+}
+.h-md-info{
+    position: absolute;
+    right: 0px;
+    height:60px;
+    line-height: 60px;
+}
+.h-md-info ul{
+    color:#fff;
+    list-style-type: none;
+}
+.h-md-info ul li{
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+    padding: 0 10px;
+}
+
+.h-nav-align{
+    vertical-align: middle;
+}
+.h-nav-align a img{
+    position: relative;display: block;
+}
+.h-nav-title{
+    color: #fff;
+}
+.h-nav-title:hover{
+    color: #efefef;
+}
+
+.h-nav-title.line{
+    color: #d2d2d3;margin-left: -10px;
+}
+.h-nav-title.tit{
+    margin-left: -20px;
+}
+.btnsquar:hover, .btnsquar:focus{
+    /*color: red!important;*/
+}
+
+.wrapper_page{
+    font-size: 14px;
+}
+
+.commTitle{
+    color:#2aabe6;
+}
+.time{
+    float: right;
+}
+
+#page{
+    margin-top: 20px;
+}
+
+#vedio_ping{
+    display: none;
+}
+#vedioList{
+    padding-bottom: 15px;padding-top: 15px;
+}
+
+#course_xiang{
+    padding-left: 20px;padding-right: 20px;
+}
+
+.mar_l{
+    margin-left: 63px;
+}
+.avatar{
+    margin-left: 5px;
+}
+.inner{
+    padding-left: 15px;
+}
+
+#iframe{
+    width:100%;height: 550px;
+}
+
+.clearfix .txt{
+    width:calc(100% - 750px);border: 1px solid #dfc7c5;border-left:0;
+}
+#video{
+    width: 750px; height: 550px;
+}
+.btnsquar.btn-bg-white.font-size-15{
+    margin-right: 8px;
+}

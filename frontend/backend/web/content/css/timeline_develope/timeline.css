@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+article,section,.div-title,aside{display:block;}
+
+body {
+  color: #9f9f9f;
+  background: #fff;
+  font-size: 1.16em;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+
+.point-time {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 17px;
+  left: 34%;
+  background: #1c87bf;
+  margin-left: -7px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 #a7a7a7;
+  transition:All 0.4s ease-in-out;
+  -webkit-transition:All 0.4s ease-in-out;
+  -moz-transition:All 0.4s ease-in-out;
+  -o-transition:All 0.4s ease-in-out;
+}
+.point-time:hover {
+
+  transform:rotate(360deg) scale(1.5);
+  -webkit-transform:rotate(360deg) scale(1.5);
+  -moz-transform:rotate(360deg) scale(1.5);
+  -o-transform:rotate(360deg) scale(1.5);
+  -ms-transform:rotate(360deg) scale(1.5);
+}
+.text-grey{
+  color: grey;
+}
+.text-red {
+  color: #f6393f;
+}
+
+.text-blue {
+  color: #1c87bf;
+}
+
+.text-green {
+  color: #547509;
+}
+
+.text-yellow {
+  color: #af8d35;
+}
+
+.text-purple {
+  color: #d32d93;
+}
+
+.point-red {
+  background-color: #f6393f;
+}
+
+.point-blue {
+  background-color: #1c87bf;
+}
+
+.point-green {
+  background-color: #95c91e;
+}
+
+.point-yellow {
+  background-color: #ffb902;
+}
+
+.point-purple {
+  background-color: #d32d93;
+}
+.point-grey{
+  background-color: grey;
+}
+
+.content {
+  width: 100%;
+  margin: 30px 0;
+}
+.content article {
+  position: relative;
+}
+.content article > h3 {
+  width: 15%;
+  height: 20px;
+  line-height: 20px;
+  text-align: right;
+  font-size: 1.4em;
+  color: #1d1d1d;
+  padding: 10px 0 20px;
+}
+.content article section:hover >span.point-time{
+  transform:rotate(360deg) scale(1.5);
+  -webkit-transform:rotate(360deg) scale(1.5);
+  -moz-transform:rotate(360deg) scale(1.5);
+  -o-transform:rotate(360deg) scale(1.5);
+  -ms-transform:rotate(360deg) scale(1.5);
+}
+.content article section:hover >span.direction-backgroudn{
+  transform:translate(20px,0) scale(1.2);
+  -webkit-transform:translate(20px,0) scale(1.2);
+  -moz-transform:translate(20px,0) scale(1.2);
+  -o-transform:translate(20px,0) scale(1.2);
+  -ms-transform:translate(20px,0) scale(1.2);
+}
+.content article section:hover >aside{
+  margin-left: 45%;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+}
+.content article section {
+  padding: 0 0 17px;
+  position: relative;
+}
+.content article section:before {
+  content: "";
+  width: 5px;
+  top: 17px;
+  bottom: -17px;
+  left: 34%;
+  background: #e6e6e6;
+  position: absolute;
+}
+.content article section:last-child:before {
+  display: none;
+}
+.content article section time {
+  width: 29%;
+  display: block;
+  position: absolute;
+}
+.content article section .div-title {
+  width: 29%;
+  display: block;
+  position: absolute;
+
+}
+.content article section .div-title > span {
+  display: block;
+  text-align: right;
+  /*font-size: 20px;*/
+  /*margin-top: 8px;*/
+
+  float: right;
+  height: 39px;
+  line-height: 37px;
+  background: #f4f4f4;
+  padding: 0 26px;
+  border: 1px solid #9c9c9c;
+  border-radius: 8px 0;
+  box-shadow: 5px 5px 5px #c2c2c2;
+  margin: 8px 10px 0 24px;
+  font-family: 'Microsoft YaHei';
+  font-size: 17px;
+  color: #191919;
+}
+.content article section aside {
+  color: #3a3a38;
+  margin-left: 40%;
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+.content article section .brief {
+  color: #9f9f9f;
+}
+.things{
+  margin-bottom: 5px;
+}
+.float-e-margins .btn{
+  margin-bottom: 5px;
+  font-size: 10px;
+  padding:1px 5px!important;
+}
+.direction-backgroudn{
+  z-index: 2;
+  background-image: url("/content/img/direction_purple.png");
+  width: 38px;
+  left: 43px;
+  top: 10px;
+  bottom: -17px;
+  left: 33%;
+  position: absolute;
+  background-repeat: no-repeat;
+  transition:All 0.4s ease-in-out;
+  -webkit-transition:All 0.4s ease-in-out;
+  -moz-transition:All 0.4s ease-in-out;
+  -o-transition:All 0.4s ease-in-out;
+}
+.direction-backgroudn:hover {
+  transform:translate(20px,0) scale(1.2);
+  -webkit-transform:translate(20px,0) scale(1.2);
+  -moz-transform:translate(20px,0) scale(1.2);
+  -o-transform:translate(20px,0) scale(1.2);
+  -ms-transform:translate(20px,0) scale(1.2);
+}

@@ -1,0 +1,70 @@
+.activityBox {
+    height: 415px;
+    width:270px;
+    position:relative;
+}
+.activityBox a{
+    color:#C30;
+}
+.activityBox .title {
+    width: 270px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 10px;
+    background:#f3eef3;
+}
+.activityBox .title h2 {
+    font-size: 18px;
+    line-height: 34px;
+    color: #fff;
+    font-weight:normal;
+}
+.activityBox .title .pageState{ margin-left:5px; }
+.activityBox .content { width: 270px; position: relative; }
+.activityBox .content .contentInner { width: 248px; height: 376px; max-height: 376px; overflow: hidden;text-overflow: ellipsis; margin: 0; padding: 10px 10px; position: relative; overflow: hidden; border: 1px solid #F0F0F0; }
+.activityBox .content .contentInner ul { /*width: 235px; */height: 376px; position: absolute; }
+.activityBox .content .contentInner ul li { height: 246px; }
+.activityBox .content .contentInner ul li img{ vertical-align:middle; }
+.activityBox .content .contentInner .mt5 { margin-top:10px;font-size: 14px; }
+.activityBox .content .contentInner p span{ color:#999; margin-left:15px; }
+.activityBox .title, .activityBox .title a { color: #222; }
+.activityBox .title .ac_List { position: absolute; right: 60px; top:0; }
+.activityBox .title .prev, .activityBox .title .next {
+    width: 16px;
+    height: 14px;
+    position: absolute;
+    display: block;
+    top: 10px;
+    cursor: pointer;
+    background:url("../../images/index_main.png") 0 0 no-repeat;
+}
+.activityBox .title .prev {
+    right: 38px;
+    background-position: -52px -345px;
+}
+.activityBox .title .next {
+    right: 16px;
+    background-position: -35px -345px;
+}
+.activityBox .title .prev:hover { background-position: -86px -345px; }
+.activityBox .title .next:hover { background-position: -69px -345px; }
+.activityBox .leftZone, .activityBox .rightZone {
+    background:url(../images/index_main.png) 0 0 no-repeat;
+    width: 8px;
+    height: 8px;
+    font-size: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+}
+.activityBox .leftZone { background-position: -103px -345px; left: 0; }
+.activityBox .rightZone { background-position: -114px -345px; right: 0; }
+
+.tempWrap ul li{height:376px;}
+
+.more{
+    position: absolute;
+    right:10px;
+    top:0;
+    color: red!important;
+}

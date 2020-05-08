@@ -1,0 +1,257 @@
+ol {
+    padding: 0;
+}
+
+.ly_article img {
+    display: block;
+    margin:15px auto;
+    max-width: 100% !important;
+}
+
+.ly_article_box {
+
+}
+
+.share {
+    float: right;
+    /*margin-top:20px;*/
+}
+.wechat-qrcode{
+    height: 122px !important;
+}
+
+.wechat-qrcode h4 {
+    display: none;
+}
+
+.wechat-qrcode .help {
+    display: none;
+}
+
+.ly_article_content p{
+    padding: 10px;
+    color: #333;
+    font-size: 16px;
+    line-height: 2.2;
+    word-wrap:break-word;
+}
+
+#ly_article_bar {
+    width: 850px;
+    height: 100%;
+    min-height: 300px;
+    max-width: 872px;
+    background: #fff;
+    overflow: auto;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.ly_title {
+    text-align: center;
+    font: bold 32px/150% "微软雅黑";
+    padding: 0 50px 5px 50px;
+}
+
+.ly_title.sec {
+    font: 700 20px/26px "\5FAE\8F6F\96C5\9ED1", tahoma;
+}
+
+.ly_title_span {
+    margin-top: 10px;
+    line-height: 44px;
+    padding: 0px 40px;
+    font-size: 14px;
+}
+
+/*进度条*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+a {
+    color: #2f4050;
+    outline: none;
+    text-decoration: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+a:hover, a:focus {
+    color: #74777b;
+    text-decoration: none;
+}
+
+.progress {
+    margin-bottom: 10px;
+    background: #dbd9d9;
+}
+
+.ly_progress {
+    width: 100%;
+    height: 100%;
+    background: none;
+    line-height: 30px;
+}
+
+.ly_progress_content {
+    padding: 15px 40px;
+    letter-spacing: 1px;
+    text-indent: 2em;
+    font: normal 18px/200% "微软雅黑";
+    line-height: 180%;
+}
+
+.ly_progress p {
+    padding: 10px;
+}
+
+.ly_progress_vote {
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px 10px;
+}
+
+.ly_detail p {
+    background: none;
+    text-align: right;
+    padding: 0 10px 15px 0;
+}
+
+/*热门*/
+/* ranklist */
+.ranklist {
+    width: calc(100% - 874px);
+    margin-left: 20px;
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    border-radius: 5px;
+    border: 1px solid #f6f4f3;
+    padding: 10px 10px 0 10px;
+    background: #f9f9f9;
+}
+
+.ranklist h3 {
+    color: red;
+    padding: 5px 0 10px 0;
+    border-bottom: 1px dotted #b0abab;
+    margin-bottom: 15px;
+}
+
+.ranklist li {
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px dotted #eae6e6;
+    /* padding: 0 70px 25px 30px;
+     margin:0 0 10px 0;*/
+}
+
+.ranklist li em {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: super;
+    background: #b6b0ac;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+}
+
+.ranklist li em {
+    font-style: normal;
+    background-position: 0 -16px;
+}
+
+.ranklist li.top em {
+    font-style: italic;
+    background: red;
+    color: #fff;
+}
+
+.ranklist li .num {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #999;
+}
+
+.ranklist li a {
+    font-size: 13px;
+    width: calc(100% - 25px);
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 30px;
+    text-indent: 8px;
+}
+
+.footer {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.footer span {
+    padding-right: 25px;
+}
+
+/*热点*/
+.text_con_right .box_ol {
+    border: #efefef 1px solid;
+    margin: 30px auto;
+}
+
+.text_con_right .box_ol ol {
+    margin: 10px 5px 15px 12px;
+    background: url(images/ol_bg.gif) 0 8px no-repeat;
+}
+
+.text_con_right .box_ol ol li {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 35px;
+    font-size: 14px;
+}
+
+/*投票*/
+fieldset {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    padding: 1em 15px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: .2em 5px;
+}
+
+label {
+    margin-right: 1.2em;
+}
+
+#radioSelect {
+    width: 60%;
+    margin: 0 auto;
+}
+

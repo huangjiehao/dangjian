@@ -1,0 +1,231 @@
+.slide-container@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.slide-container {
+  margin: auto;
+  width: 270px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.wrapper{
+  padding:0;
+}
+.wrapper:focus {
+  outline: 0;
+}
+
+.clash-card {
+  background: white;
+  width: 268px;
+  display: inline-block;
+  margin: auto;
+  border-radius: 0;
+  position: relative;
+  text-align: center;
+  z-index: 9999;
+  border: 1px solid #eee;
+}
+
+.clash-card__image {
+  position: relative;
+  height: 100%;
+  margin-bottom: 18px;
+  /*border-top-left-radius: 14px;
+  border-top-right-radius: 14px;*/
+}
+
+.clash-card__image--barbarian {
+  background:#f9f9f9;
+}
+.clash-card__image--barbarian img {
+  width: 270px;
+  max-width:100%;
+  max-height:100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.clash-card__image--archer {
+  background: url("../img/archer-bg.jpg");
+}
+.clash-card__image--archer img {
+  width: 270px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.clash-card__image--giant {
+  background: url("../img/giant-bg.jpg");
+}
+.clash-card__image--giant img {
+  width: 270px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+/*.clash-card__image--goblin {
+  background: url("../img/goblin-bg.jpg");
+}*/
+.clash-card__image--goblin img {
+  width: 270px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.clash-card__image--wizard {
+  background: url("../img/wizard-bg.jpg");
+}
+.clash-card__image--wizard img {
+  width: 270px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.clash-card__level {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.clash-card__level--barbarian {
+  color: #EC9B3B;
+}
+
+.clash-card__level--archer {
+  color: #EE5487;
+}
+
+.clash-card__level--giant {
+  color: #F6901A;
+}
+
+.clash-card__level--goblin {
+  color: #82BB30;
+}
+
+.clash-card__level--wizard {
+  color: #4FACFF;
+}
+
+.clash-card__unit-name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.clash-card__unit-description {
+  padding: 0px 20px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+}
+
+.clash-card__unit-stats--barbarian {
+  background: #EC9B3B;
+}
+.clash-card__unit-stats--barbarian .one-third {
+  border-right: 1px solid #BD7C2F;
+}
+
+.clash-card__unit-stats--archer {
+  background: #EE5487;
+}
+.clash-card__unit-stats--archer .one-third {
+  border-right: 1px solid #D04976;
+}
+
+.clash-card__unit-stats--giant {
+  background: #F6901A;
+}
+.clash-card__unit-stats--giant .one-third {
+  border-right: 1px solid #de7b09;
+}
+
+.clash-card__unit-stats--goblin {
+  background: #82BB30;
+}
+.clash-card__unit-stats--goblin .one-third {
+  border-right: 1px solid #71a32a;
+}
+
+.clash-card__unit-stats--wizard {
+  background: #4FACFF;
+}
+.clash-card__unit-stats--wizard .one-third {
+  border-right: 1px solid #309eff;
+}
+
+.clash-card__unit-stats {
+  color: white;
+  font-weight: 700;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+.clash-card__unit-stats .one-third {
+  width: 33%;
+  float: left;
+  padding: 20px 15px;
+}
+.clash-card__unit-stats sup {
+  position: absolute;
+  bottom: 4px;
+  font-size: 45%;
+  margin-left: 2px;
+}
+.clash-card__unit-stats .stat {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.clash-card__unit-stats .stat-value {
+  text-transform: uppercase;
+  font-weight: 270;
+  font-size: 12px;
+}
+.clash-card__unit-stats .no-border {
+  border-right: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.slick-prev {
+  left: 95px;
+  bottom: -12px;
+ top:auto;
+  z-index: 999;
+}
+
+.slick-next {
+  right: 115px;
+  bottom: -12px;
+  top:auto;
+  z-index: 999;
+}
+
+
+.slick-prev:before, .slick-next:before{
+	color: #b5a5a5;
+	font-size: 35px;
+  background: #ddd;
+}
+
+

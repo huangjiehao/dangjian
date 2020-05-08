@@ -1,0 +1,49 @@
+#main{
+    width:1200px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+.content{
+    position: relative;
+    height: 600px;
+}
+.baseInfo ,.studyInfo,.groupLife{
+    width: 200px;
+    background: #fff;
+    position: absolute;
+}
+.baseInfo li,.studyInfo li,.groupLife li{
+    margin: 4px 0;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 20px;
+}
+.baseInfo{
+    top: 10px;
+    right: 20px;
+}
+.studyInfo{
+    top: 10px;
+    left: 20px;
+}
+.groupLife{
+    top: 200px;
+    left: 20px;
+}
+.header{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 5px 0;
+}
+.img{
+    margin: 60px auto;
+    height: 300px;
+    width: 400px;
+    background: orangered;
+    text-align: center;
+    line-height: 300px;
+    color: #fff;
+
+}

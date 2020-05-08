@@ -1,0 +1,175 @@
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.my_tree li > a {
+    color: #333;
+    text-decoration: none !important;
+}
+
+.my_tree .layoutOpt a {
+    width: auto;
+    color: #fff;
+    display: inline-block;
+    height:22px;
+    line-height:8px;
+    font-size: 12px;
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.my_tree li span {
+    font-size: 14px;
+}
+
+.my_tree li span.button {
+    line-height: 28px;
+    margin: 0;
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 0 none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+}
+
+.my_tree li a.active .btn_caret {
+    color: #fff;
+}
+
+.my_tree li span.button.roots_close,
+.my_tree li span.button,
+.my_tree li span.button.bottom_close {
+    /*background: url('/content/images/Tplus_wev8.png') no-repeat center 3px;*/
+}
+
+.my_tree li span.button.none {
+    background: transparent !important;
+}
+
+.my_tree li span.button.roots_open,
+.my_tree li span.button.center_open,
+.my_tree li span.button.bottom_open {
+    /*background: url('/content/images/Lminus_wev8.png') no-repeat center -3px;*/
+}
+
+.my_tree a {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    line-height: 30px;
+}
+
+.my_tree li > a:hover {
+    color: #018efb;
+    background-color: #def0ff;
+}
+
+.my_tree li > a.active {
+    background-color: #0D93F6 !important;
+    color: #fff;
+}
+
+.my_tree li > a.active .my_tree_checkbox {
+    border-color: #fff;
+    color: #fff;
+}
+
+.select-tree {
+    position: relative;
+}
+
+.select-tree-option {
+    position: absolute;
+    display: none;
+    width: 100%;
+    z-index: 9;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, .3);
+    max-height: 400px;
+    overflow-y: scroll !important;
+}
+
+.my_tree {
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.button.remove_tree {
+    background: none !important;
+    color: red;
+    font-size: 16px;
+    text-align: center;
+    line-height: 22px !important;
+}
+
+.close_tree ul {
+    display: none;
+}
+
+/*.my_tree_checkbox {*/
+/*width: 16px;*/
+/*height: 16px;*/
+/*margin-bottom: -3px;*/
+/*margin-right: 3px;*/
+/*display: inline-block;*/
+/*border: 1px solid #0B61A4;*/
+/*color: #0B61A4;*/
+/*font-size: 12px !important;*/
+/*text-align: center !important;*/
+/*line-height: 16px !important;*/
+/*}*/
+
+.my_tree_checkbox.button {
+    background: none;
+}
+
+.my_tree_head {
+    width: 100%;
+
+}
+
+.my_tree_head li {
+    list-style: none;
+    float: left;
+}
+
+.my_tree_head {
+    list-style: none;
+}
+
+.my_tree_table {
+    width: 100%;
+}
+
+.my_tree_table .my_tree {
+    height: 500px;
+}
+
+.my_tree_field_box {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+}
+
+samp {
+    font-family: "Microsoft Yahei" !important;
+}
+
+.my_tree_field {
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

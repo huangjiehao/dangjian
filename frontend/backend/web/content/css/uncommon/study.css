@@ -1,0 +1,657 @@
+/*! jQuery UI - v1.9.1 - 2012-11-22
+* http://jqueryui.com
+* Includes: jquery.ui.core.css, jquery.ui.resizable.css, jquery.ui.selectable.css, jquery.ui.accordion.css, jquery.ui.autocomplete.css, jquery.ui.button.css, jquery.ui.datepicker.css, jquery.ui.dialog.css, jquery.ui.menu.css, jquery.ui.progressbar.css, jquery.ui.slider.css, jquery.ui.spinner.css, jquery.ui.tabs.css, jquery.ui.tooltip.css
+* To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Helvetica%2CArial%2Csans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=2px&bgColorHeader=dddddd&bgTextureHeader=03_highlight_soft.png&bgImgOpacityHeader=50&borderColorHeader=dddddd&fcHeader=444444&iconColorHeader=0073ea&bgColorContent=ffffff&bgTextureContent=01_flat.png&bgImgOpacityContent=75&borderColorContent=dddddd&fcContent=444444&iconColorContent=ff0084&bgColorDefault=f6f6f6&bgTextureDefault=03_highlight_soft.png&bgImgOpacityDefault=100&borderColorDefault=dddddd&fcDefault=0073ea&iconColorDefault=666666&bgColorHover=0073ea&bgTextureHover=03_highlight_soft.png&bgImgOpacityHover=25&borderColorHover=0073ea&fcHover=ffffff&iconColorHover=ffffff&bgColorActive=ffffff&bgTextureActive=02_glass.png&bgImgOpacityActive=65&borderColorActive=dddddd&fcActive=ff0084&iconColorActive=454545&bgColorHighlight=ffffff&bgTextureHighlight=01_flat.png&bgImgOpacityHighlight=55&borderColorHighlight=cccccc&fcHighlight=444444&iconColorHighlight=0073ea&bgColorError=ffffff&bgTextureError=01_flat.png&bgImgOpacityError=55&borderColorError=ff0084&fcError=222222&iconColorError=ff0084&bgColorOverlay=eeeeee&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=0&opacityOverlay=80&bgColorShadow=aaaaaa&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=60&thicknessShadow=4px&offsetTopShadow=-4px&offsetLeftShadow=-4px&cornerRadiusShadow=0px
+* Copyright (c) 2012 jQuery Foundation and other contributors Licensed MIT */.ui-helper-hidden{display:none}.ui-helper-hidden-accessible{position:absolute!important;clip:rect(1px);clip:rect(1px,1px,1px,1px)}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table}.ui-helper-clearfix:after{clear:both}.ui-helper-clearfix{zoom:1}.ui-helper-zfix{width:100%;height:100%;top:0;left:0;position:absolute;opacity:0;filter:Alpha(Opacity=0)}.ui-state-disabled{cursor:default!important}.ui-icon{display:block;text-indent:-99999px;overflow:hidden;background-repeat:no-repeat}.ui-widget-overlay{position:absolute;top:0;left:0;width:100%;height:100%}.ui-resizable{position:relative}.ui-resizable-handle{position:absolute;font-size:0.1px;display:block}.ui-resizable-disabled .ui-resizable-handle,.ui-resizable-autohide .ui-resizable-handle{display:none}.ui-resizable-n{cursor:n-resize;height:7px;width:100%;top:-5px;left:0}.ui-resizable-s{cursor:s-resize;height:7px;width:100%;bottom:-5px;left:0}.ui-resizable-e{cursor:e-resize;width:7px;right:-5px;top:0;height:100%}.ui-resizable-w{cursor:w-resize;width:7px;left:-5px;top:0;height:100%}.ui-resizable-se{cursor:se-resize;width:12px;height:12px;right:1px;bottom:1px}.ui-resizable-sw{cursor:sw-resize;width:9px;height:9px;left:-5px;bottom:-5px}.ui-resizable-nw{cursor:nw-resize;width:9px;height:9px;left:-5px;top:-5px}.ui-resizable-ne{cursor:ne-resize;width:9px;height:9px;right:-5px;top:-5px}.ui-selectable-helper{position:absolute;z-index:100;border:1px dotted black}.ui-accordion .ui-accordion-header{display:block;cursor:pointer;position:relative;margin-top:2px;padding:.5em .5em .5em .7em;zoom:1}.ui-accordion .ui-accordion-icons{padding-left:2.2em}.ui-accordion .ui-accordion-noicons{padding-left:.7em}.ui-accordion .ui-accordion-icons .ui-accordion-icons{padding-left:2.2em}.ui-accordion .ui-accordion-header .ui-accordion-header-icon{position:absolute;left:.5em;top:50%;margin-top:-8px}.ui-accordion .ui-accordion-content{padding:1em 2.2em;border-top:0;overflow:auto;zoom:1}.ui-autocomplete{position:absolute;top:0;cursor:default}* html .ui-autocomplete{width:1px}.ui-button{display:inline-block;position:relative;padding:0;margin-right:.1em;cursor:pointer;text-align:center;zoom:1;overflow:visible}.ui-button,.ui-button:link,.ui-button:visited,.ui-button:hover,.ui-button:active{text-decoration:none}.ui-button-icon-only{width:2.2em}button.ui-button-icon-only{width:2.4em}.ui-button-icons-only{width:3.4em}button.ui-button-icons-only{width:3.7em}.ui-button .ui-button-text{display:block;line-height:1.4}.ui-button-text-only .ui-button-text{padding:.4em 1em}.ui-button-icon-only .ui-button-text,.ui-button-icons-only .ui-button-text{padding:.4em;text-indent:-9999999px}.ui-button-text-icon-primary .ui-button-text,.ui-button-text-icons .ui-button-text{padding:.4em 1em .4em 2.1em}.ui-button-text-icon-secondary .ui-button-text,.ui-button-text-icons .ui-button-text{padding:.4em 2.1em .4em 1em}.ui-button-text-icons .ui-button-text{padding-left:2.1em;padding-right:2.1em}input.ui-button{padding:.4em 1em}.ui-button-icon-only .ui-icon,.ui-button-text-icon-primary .ui-icon,.ui-button-text-icon-secondary .ui-icon,.ui-button-text-icons .ui-icon,.ui-button-icons-only .ui-icon{position:absolute;top:50%;margin-top:-8px}.ui-button-icon-only .ui-icon{left:50%;margin-left:-8px}.ui-button-text-icon-primary .ui-button-icon-primary,.ui-button-text-icons .ui-button-icon-primary,.ui-button-icons-only .ui-button-icon-primary{left:.5em}.ui-button-text-icon-secondary .ui-button-icon-secondary,.ui-button-text-icons .ui-button-icon-secondary,.ui-button-icons-only .ui-button-icon-secondary{right:.5em}.ui-button-text-icons .ui-button-icon-secondary,.ui-button-icons-only .ui-button-icon-secondary{right:.5em}.ui-buttonset{margin-right:7px}.ui-buttonset .ui-button{margin-left:0;margin-right:-.3em}button.ui-button::-moz-focus-inner{border:0;padding:0}.ui-datepicker{width:17em;padding:.2em .2em 0;display:none}.ui-datepicker .ui-datepicker-header{position:relative;padding:.2em 0}.ui-datepicker .ui-datepicker-prev,.ui-datepicker .ui-datepicker-next{position:absolute;top:2px;width:1.8em;height:1.8em}.ui-datepicker .ui-datepicker-prev-hover,.ui-datepicker .ui-datepicker-next-hover{top:1px}.ui-datepicker .ui-datepicker-prev{left:2px}.ui-datepicker .ui-datepicker-next{right:2px}.ui-datepicker .ui-datepicker-prev-hover{left:1px}.ui-datepicker .ui-datepicker-next-hover{right:1px}.ui-datepicker .ui-datepicker-prev span,.ui-datepicker .ui-datepicker-next span{display:block;position:absolute;left:50%;margin-left:-8px;top:50%;margin-top:-8px}.ui-datepicker .ui-datepicker-title{margin:0 2.3em;line-height:1.8em;text-align:center}.ui-datepicker .ui-datepicker-title select{font-size:1em;margin:1px 0}.ui-datepicker select.ui-datepicker-month-year{width:100%}.ui-datepicker select.ui-datepicker-month,.ui-datepicker select.ui-datepicker-year{width:49%}.ui-datepicker table{width:100%;font-size:.9em;border-collapse:collapse;margin:0 0 .4em}.ui-datepicker th{padding:.7em .3em;text-align:center;font-weight:bold;border:0}.ui-datepicker td{border:0;padding:1px}.ui-datepicker td span,.ui-datepicker td a{display:block;padding:.2em;text-align:right;text-decoration:none}.ui-datepicker .ui-datepicker-buttonpane{background-image:none;margin:.7em 0 0 0;padding:0 .2em;border-left:0;border-right:0;border-bottom:0}.ui-datepicker .ui-datepicker-buttonpane button{float:right;margin:.5em .2em .4em;cursor:pointer;padding:.2em .6em .3em .6em;width:auto;overflow:visible}.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current{float:left}.ui-datepicker.ui-datepicker-multi{width:auto}.ui-datepicker-multi .ui-datepicker-group{float:left}.ui-datepicker-multi .ui-datepicker-group table{width:95%;margin:0 auto .4em}.ui-datepicker-multi-2 .ui-datepicker-group{width:50%}.ui-datepicker-multi-3 .ui-datepicker-group{width:33.3%}.ui-datepicker-multi-4 .ui-datepicker-group{width:25%}.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header{border-left-width:0}.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header{border-left-width:0}.ui-datepicker-multi .ui-datepicker-buttonpane{clear:left}.ui-datepicker-row-break{clear:both;width:100%;font-size:0em}.ui-datepicker-rtl{direction:rtl}.ui-datepicker-rtl .ui-datepicker-prev{right:2px;left:auto}.ui-datepicker-rtl .ui-datepicker-next{left:2px;right:auto}.ui-datepicker-rtl .ui-datepicker-prev:hover{right:1px;left:auto}.ui-datepicker-rtl .ui-datepicker-next:hover{left:1px;right:auto}.ui-datepicker-rtl .ui-datepicker-buttonpane{clear:right}.ui-datepicker-rtl .ui-datepicker-buttonpane button{float:left}.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current{float:right}.ui-datepicker-rtl .ui-datepicker-group{float:right}.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header{border-right-width:0;border-left-width:1px}.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header{border-right-width:0;border-left-width:1px}.ui-datepicker-cover{position:absolute;z-index:-1;filter:mask();top:-4px;left:-4px;width:200px;height:200px}.ui-dialog{position:absolute;padding:.2em;width:300px;overflow:hidden}.ui-dialog .ui-dialog-titlebar{padding:.4em 1em;position:relative}.ui-dialog .ui-dialog-title{float:left;margin:.1em 16px .1em 0}.ui-dialog .ui-dialog-titlebar-close{position:absolute;right:.3em;top:50%;width:19px;margin:-10px 0 0 0;padding:1px;height:18px}.ui-dialog .ui-dialog-titlebar-close span{display:block;margin:1px}.ui-dialog .ui-dialog-titlebar-close:hover,.ui-dialog .ui-dialog-titlebar-close:focus{padding:0}.ui-dialog .ui-dialog-content{position:relative;border:0;padding:.5em 1em;background:none;overflow:auto;zoom:1}.ui-dialog .ui-dialog-buttonpane{text-align:left;border-width:1px 0 0 0;background-image:none;margin:.5em 0 0 0;padding:.3em 1em .5em .4em}.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset{float:right}.ui-dialog .ui-dialog-buttonpane button{margin:.5em .4em .5em 0;cursor:pointer}.ui-dialog .ui-resizable-se{width:14px;height:14px;right:3px;bottom:3px}.ui-draggable .ui-dialog-titlebar{cursor:move}.ui-menu{list-style:none;padding:2px;margin:0;display:block;outline:none}.ui-menu .ui-menu{margin-top:-3px;position:absolute}.ui-menu .ui-menu-item{margin:0;padding:0;zoom:1;width:100%}.ui-menu .ui-menu-divider{margin:5px -2px 5px -2px;height:0;font-size:0;line-height:0;border-width:1px 0 0 0}.ui-menu .ui-menu-item a{text-decoration:none;display:block;padding:2px .4em;line-height:1.5;zoom:1;font-weight:normal}.ui-menu .ui-menu-item a.ui-state-focus,.ui-menu .ui-menu-item a.ui-state-active{font-weight:normal;margin:-1px}.ui-menu .ui-state-disabled{font-weight:normal;margin:.4em 0 .2em;line-height:1.5}.ui-menu .ui-state-disabled a{cursor:default}.ui-menu-icons{position:relative}.ui-menu-icons .ui-menu-item a{position:relative;padding-left:2em}.ui-menu .ui-icon{position:absolute;top:.2em;left:.2em}.ui-menu .ui-menu-icon{position:static;float:right}.ui-progressbar{height:2em;text-align:left;overflow:hidden}.ui-progressbar .ui-progressbar-value{margin:-1px;height:100%}.ui-slider{position:relative;text-align:left}.ui-slider .ui-slider-handle{position:absolute;z-index:2;width:1.2em;height:1.2em;cursor:default}.ui-slider .ui-slider-range{position:absolute;z-index:1;font-size:.7em;display:block;border:0;background-position:0 0}.ui-slider-horizontal{height:.8em}.ui-slider-horizontal .ui-slider-handle{top:-.3em;margin-left:-.6em}.ui-slider-horizontal .ui-slider-range{top:0;height:100%}.ui-slider-horizontal .ui-slider-range-min{left:0}.ui-slider-horizontal .ui-slider-range-max{right:0}.ui-slider-vertical{width:.8em;height:100px}.ui-slider-vertical .ui-slider-handle{left:-.3em;margin-left:0;margin-bottom:-.6em}.ui-slider-vertical .ui-slider-range{left:0;width:100%}.ui-slider-vertical .ui-slider-range-min{bottom:0}.ui-slider-vertical .ui-slider-range-max{top:0}.ui-spinner{position:relative;display:inline-block;overflow:hidden;padding:0;vertical-align:middle}.ui-spinner-input{border:none;background:none;padding:0;margin:.2em 0;vertical-align:middle;margin-left:.4em;margin-right:22px}.ui-spinner-button{width:16px;height:50%;font-size:.5em;padding:0;margin:0;text-align:center;position:absolute;cursor:default;display:block;overflow:hidden;right:0}.ui-spinner a.ui-spinner-button{border-top:none;border-bottom:none;border-right:none}.ui-spinner .ui-icon{position:absolute;margin-top:-8px;top:50%;left:0}.ui-spinner-up{top:0}.ui-spinner-down{bottom:0}.ui-spinner .ui-icon-triangle-1-s{background-position:-65px -16px}.ui-tabs{position:relative;padding:.2em;zoom:1}.ui-tabs .ui-tabs-nav{margin:0;padding:.2em .2em 0}.ui-tabs .ui-tabs-nav li{list-style:none;float:left;position:relative;top:0;margin:1px .2em 0 0;border-bottom:0;padding:0;white-space:nowrap}.ui-tabs .ui-tabs-nav li a{float:left;padding:.5em 1em;text-decoration:none}.ui-tabs .ui-tabs-nav li.ui-tabs-active{margin-bottom:-1px;padding-bottom:1px}.ui-tabs .ui-tabs-nav li.ui-tabs-active a,.ui-tabs .ui-tabs-nav li.ui-state-disabled a,.ui-tabs .ui-tabs-nav li.ui-tabs-loading a{cursor:text}.ui-tabs .ui-tabs-nav li a,.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a{cursor:pointer}.ui-tabs .ui-tabs-panel{display:block;border-width:0;padding:1em 1.4em;background:none}.ui-tooltip{padding:8px;position:absolute;z-index:9999;max-width:300px;-webkit-box-shadow:0 0 5px #aaa;box-shadow:0 0 5px #aaa}* html .ui-tooltip{background-image:none}body .ui-tooltip{border-width:2px}.ui-widget{font-family:Helvetica,Arial,sans-serif;font-size:1.1em}.ui-widget .ui-widget{font-size:1em}.ui-widget input,.ui-widget select,.ui-widget textarea,.ui-widget button{font-family:Helvetica,Arial,sans-serif;font-size:1em}.ui-widget-content{border:1px solid #ddd;background:#fff url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;color:#444}.ui-widget-content a{color:#444}.ui-widget-header{border:1px solid #ddd;background:#ddd url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-bg_highlight-soft_50_dddddd_1x100.png) 50% 50% repeat-x;color:#444;font-weight:bold}.ui-widget-header a{color:#444}.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default{border:1px solid #ddd;background:#f6f6f6 url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-bg_highlight-soft_100_f6f6f6_1x100.png) 50% 50% repeat-x;font-weight:bold;color:#0073ea}.ui-state-default a,.ui-state-default a:link,.ui-state-default a:visited{color:#0073ea;text-decoration:none}.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus{border:1px solid #0073ea;background:#0073ea url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-bg_highlight-soft_25_0073ea_1x100.png) 50% 50% repeat-x;font-weight:bold;color:#fff}.ui-state-hover a,.ui-state-hover a:hover,.ui-state-hover a:link,.ui-state-hover a:visited{color:#fff;text-decoration:none}.ui-state-active,.ui-widget-content .ui-state-active,.ui-widget-header .ui-state-active{border:1px solid #ddd;background:#fff url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;font-weight:bold;color:#ff0084}.ui-state-active a,.ui-state-active a:link,.ui-state-active a:visited{color:#ff0084;text-decoration:none}.ui-state-highlight,.ui-widget-content .ui-state-highlight,.ui-widget-header .ui-state-highlight{border:1px solid #ccc;background:#fff url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-bg_flat_55_ffffff_40x100.png) 50% 50% repeat-x;color:#444}.ui-state-highlight a,.ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a{color:#444}.ui-state-error,.ui-widget-content .ui-state-error,.ui-widget-header .ui-state-error{border:1px solid #ff0084;background:#fff url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-bg_flat_55_ffffff_40x100.png) 50% 50% repeat-x;color:#222}.ui-state-error a,.ui-widget-content .ui-state-error a,.ui-widget-header .ui-state-error a{color:#222}.ui-state-error-text,.ui-widget-content .ui-state-error-text,.ui-widget-header .ui-state-error-text{color:#222}.ui-priority-primary,.ui-widget-content .ui-priority-primary,.ui-widget-header .ui-priority-primary{font-weight:bold}.ui-priority-secondary,.ui-widget-content .ui-priority-secondary,.ui-widget-header .ui-priority-secondary{opacity:.7;filter:Alpha(Opacity=70);font-weight:normal}.ui-state-disabled,.ui-widget-content .ui-state-disabled,.ui-widget-header .ui-state-disabled{opacity:.35;filter:Alpha(Opacity=35);background-image:none}.ui-state-disabled .ui-icon{filter:Alpha(Opacity=35)}.ui-icon{width:16px;height:16px;background-image:url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-icons_ff0084_256x240.png)}.ui-widget-content .ui-icon{background-image:url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-icons_ff0084_256x240.png)}.ui-widget-header .ui-icon{background-image:url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-icons_0073ea_256x240.png)}.ui-state-default .ui-icon{background-image:url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-icons_666666_256x240.png)}.ui-state-hover .ui-icon,.ui-state-focus .ui-icon{background-image:url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-icons_ffffff_256x240.png)}.ui-state-active .ui-icon{background-image:url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-icons_454545_256x240.png)}.ui-state-highlight .ui-icon{background-image:url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-icons_0073ea_256x240.png)}.ui-state-error .ui-icon,.ui-state-error-text .ui-icon{background-image:url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-icons_ff0084_256x240.png)}.ui-icon-carat-1-n{background-position:0 0}.ui-icon-carat-1-ne{background-position:-16px 0}.ui-icon-carat-1-e{background-position:-32px 0}.ui-icon-carat-1-se{background-position:-48px 0}.ui-icon-carat-1-s{background-position:-64px 0}.ui-icon-carat-1-sw{background-position:-80px 0}.ui-icon-carat-1-w{background-position:-96px 0}.ui-icon-carat-1-nw{background-position:-112px 0}.ui-icon-carat-2-n-s{background-position:-128px 0}.ui-icon-carat-2-e-w{background-position:-144px 0}.ui-icon-triangle-1-n{background-position:0 -16px}.ui-icon-triangle-1-ne{background-position:-16px -16px}.ui-icon-triangle-1-e{background-position:-32px -16px}.ui-icon-triangle-1-se{background-position:-48px -16px}.ui-icon-triangle-1-s{background-position:-64px -16px}.ui-icon-triangle-1-sw{background-position:-80px -16px}.ui-icon-triangle-1-w{background-position:-96px -16px}.ui-icon-triangle-1-nw{background-position:-112px -16px}.ui-icon-triangle-2-n-s{background-position:-128px -16px}.ui-icon-triangle-2-e-w{background-position:-144px -16px}.ui-icon-arrow-1-n{background-position:0 -32px}.ui-icon-arrow-1-ne{background-position:-16px -32px}.ui-icon-arrow-1-e{background-position:-32px -32px}.ui-icon-arrow-1-se{background-position:-48px -32px}.ui-icon-arrow-1-s{background-position:-64px -32px}.ui-icon-arrow-1-sw{background-position:-80px -32px}.ui-icon-arrow-1-w{background-position:-96px -32px}.ui-icon-arrow-1-nw{background-position:-112px -32px}.ui-icon-arrow-2-n-s{background-position:-128px -32px}.ui-icon-arrow-2-ne-sw{background-position:-144px -32px}.ui-icon-arrow-2-e-w{background-position:-160px -32px}.ui-icon-arrow-2-se-nw{background-position:-176px -32px}.ui-icon-arrowstop-1-n{background-position:-192px -32px}.ui-icon-arrowstop-1-e{background-position:-208px -32px}.ui-icon-arrowstop-1-s{background-position:-224px -32px}.ui-icon-arrowstop-1-w{background-position:-240px -32px}.ui-icon-arrowthick-1-n{background-position:0 -48px}.ui-icon-arrowthick-1-ne{background-position:-16px -48px}.ui-icon-arrowthick-1-e{background-position:-32px -48px}.ui-icon-arrowthick-1-se{background-position:-48px -48px}.ui-icon-arrowthick-1-s{background-position:-64px -48px}.ui-icon-arrowthick-1-sw{background-position:-80px -48px}.ui-icon-arrowthick-1-w{background-position:-96px -48px}.ui-icon-arrowthick-1-nw{background-position:-112px -48px}.ui-icon-arrowthick-2-n-s{background-position:-128px -48px}.ui-icon-arrowthick-2-ne-sw{background-position:-144px -48px}.ui-icon-arrowthick-2-e-w{background-position:-160px -48px}.ui-icon-arrowthick-2-se-nw{background-position:-176px -48px}.ui-icon-arrowthickstop-1-n{background-position:-192px -48px}.ui-icon-arrowthickstop-1-e{background-position:-208px -48px}.ui-icon-arrowthickstop-1-s{background-position:-224px -48px}.ui-icon-arrowthickstop-1-w{background-position:-240px -48px}.ui-icon-arrowreturnthick-1-w{background-position:0 -64px}.ui-icon-arrowreturnthick-1-n{background-position:-16px -64px}.ui-icon-arrowreturnthick-1-e{background-position:-32px -64px}.ui-icon-arrowreturnthick-1-s{background-position:-48px -64px}.ui-icon-arrowreturn-1-w{background-position:-64px -64px}.ui-icon-arrowreturn-1-n{background-position:-80px -64px}.ui-icon-arrowreturn-1-e{background-position:-96px -64px}.ui-icon-arrowreturn-1-s{background-position:-112px -64px}.ui-icon-arrowrefresh-1-w{background-position:-128px -64px}.ui-icon-arrowrefresh-1-n{background-position:-144px -64px}.ui-icon-arrowrefresh-1-e{background-position:-160px -64px}.ui-icon-arrowrefresh-1-s{background-position:-176px -64px}.ui-icon-arrow-4{background-position:0 -80px}.ui-icon-arrow-4-diag{background-position:-16px -80px}.ui-icon-extlink{background-position:-32px -80px}.ui-icon-newwin{background-position:-48px -80px}.ui-icon-refresh{background-position:-64px -80px}.ui-icon-shuffle{background-position:-80px -80px}.ui-icon-transfer-e-w{background-position:-96px -80px}.ui-icon-transferthick-e-w{background-position:-112px -80px}.ui-icon-folder-collapsed{background-position:0 -96px}.ui-icon-folder-open{background-position:-16px -96px}.ui-icon-document{background-position:-32px -96px}.ui-icon-document-b{background-position:-48px -96px}.ui-icon-note{background-position:-64px -96px}.ui-icon-mail-closed{background-position:-80px -96px}.ui-icon-mail-open{background-position:-96px -96px}.ui-icon-suitcase{background-position:-112px -96px}.ui-icon-comment{background-position:-128px -96px}.ui-icon-person{background-position:-144px -96px}.ui-icon-print{background-position:-160px -96px}.ui-icon-trash{background-position:-176px -96px}.ui-icon-locked{background-position:-192px -96px}.ui-icon-unlocked{background-position:-208px -96px}.ui-icon-bookmark{background-position:-224px -96px}.ui-icon-tag{background-position:-240px -96px}.ui-icon-home{background-position:0 -112px}.ui-icon-flag{background-position:-16px -112px}.ui-icon-calendar{background-position:-32px -112px}.ui-icon-cart{background-position:-48px -112px}.ui-icon-pencil{background-position:-64px -112px}.ui-icon-clock{background-position:-80px -112px}.ui-icon-disk{background-position:-96px -112px}.ui-icon-calculator{background-position:-112px -112px}.ui-icon-zoomin{background-position:-128px -112px}.ui-icon-zoomout{background-position:-144px -112px}.ui-icon-search{background-position:-160px -112px}.ui-icon-wrench{background-position:-176px -112px}.ui-icon-gear{background-position:-192px -112px}.ui-icon-heart{background-position:-208px -112px}.ui-icon-star{background-position:-224px -112px}.ui-icon-link{background-position:-240px -112px}.ui-icon-cancel{background-position:0 -128px}.ui-icon-plus{background-position:-16px -128px}.ui-icon-plusthick{background-position:-32px -128px}.ui-icon-minus{background-position:-48px -128px}.ui-icon-minusthick{background-position:-64px -128px}.ui-icon-close{background-position:-80px -128px}.ui-icon-closethick{background-position:-96px -128px}.ui-icon-key{background-position:-112px -128px}.ui-icon-lightbulb{background-position:-128px -128px}.ui-icon-scissors{background-position:-144px -128px}.ui-icon-clipboard{background-position:-160px -128px}.ui-icon-copy{background-position:-176px -128px}.ui-icon-contact{background-position:-192px -128px}.ui-icon-image{background-position:-208px -128px}.ui-icon-video{background-position:-224px -128px}.ui-icon-script{background-position:-240px -128px}.ui-icon-alert{background-position:0 -144px}.ui-icon-info{background-position:-16px -144px}.ui-icon-notice{background-position:-32px -144px}.ui-icon-help{background-position:-48px -144px}.ui-icon-check{background-position:-64px -144px}.ui-icon-bullet{background-position:-80px -144px}.ui-icon-radio-on{background-position:-96px -144px}.ui-icon-radio-off{background-position:-112px -144px}.ui-icon-pin-w{background-position:-128px -144px}.ui-icon-pin-s{background-position:-144px -144px}.ui-icon-play{background-position:0 -160px}.ui-icon-pause{background-position:-16px -160px}.ui-icon-seek-next{background-position:-32px -160px}.ui-icon-seek-prev{background-position:-48px -160px}.ui-icon-seek-end{background-position:-64px -160px}.ui-icon-seek-start{background-position:-80px -160px}.ui-icon-seek-first{background-position:-80px -160px}.ui-icon-stop{background-position:-96px -160px}.ui-icon-eject{background-position:-112px -160px}.ui-icon-volume-off{background-position:-128px -160px}.ui-icon-volume-on{background-position:-144px -160px}.ui-icon-power{background-position:0 -176px}.ui-icon-signal-diag{background-position:-16px -176px}.ui-icon-signal{background-position:-32px -176px}.ui-icon-battery-0{background-position:-48px -176px}.ui-icon-battery-1{background-position:-64px -176px}.ui-icon-battery-2{background-position:-80px -176px}.ui-icon-battery-3{background-position:-96px -176px}.ui-icon-circle-plus{background-position:0 -192px}.ui-icon-circle-minus{background-position:-16px -192px}.ui-icon-circle-close{background-position:-32px -192px}.ui-icon-circle-triangle-e{background-position:-48px -192px}.ui-icon-circle-triangle-s{background-position:-64px -192px}.ui-icon-circle-triangle-w{background-position:-80px -192px}.ui-icon-circle-triangle-n{background-position:-96px -192px}.ui-icon-circle-arrow-e{background-position:-112px -192px}.ui-icon-circle-arrow-s{background-position:-128px -192px}.ui-icon-circle-arrow-w{background-position:-144px -192px}.ui-icon-circle-arrow-n{background-position:-160px -192px}.ui-icon-circle-zoomin{background-position:-176px -192px}.ui-icon-circle-zoomout{background-position:-192px -192px}.ui-icon-circle-check{background-position:-208px -192px}.ui-icon-circlesmall-plus{background-position:0 -208px}.ui-icon-circlesmall-minus{background-position:-16px -208px}.ui-icon-circlesmall-close{background-position:-32px -208px}.ui-icon-squaresmall-plus{background-position:-48px -208px}.ui-icon-squaresmall-minus{background-position:-64px -208px}.ui-icon-squaresmall-close{background-position:-80px -208px}.ui-icon-grip-dotted-vertical{background-position:0 -224px}.ui-icon-grip-dotted-horizontal{background-position:-16px -224px}.ui-icon-grip-solid-vertical{background-position:-32px -224px}.ui-icon-grip-solid-horizontal{background-position:-48px -224px}.ui-icon-gripsmall-diagonal-se{background-position:-64px -224px}.ui-icon-grip-diagonal-se{background-position:-80px -224px}.ui-corner-all,.ui-corner-top,.ui-corner-left,.ui-corner-tl{-moz-border-radius-topleft:2px;-webkit-border-top-left-radius:2px;-khtml-border-top-left-radius:2px;border-top-left-radius:2px}.ui-corner-all,.ui-corner-top,.ui-corner-right,.ui-corner-tr{-moz-border-radius-topright:2px;-webkit-border-top-right-radius:2px;-khtml-border-top-right-radius:2px;border-top-right-radius:2px}.ui-corner-all,.ui-corner-bottom,.ui-corner-left,.ui-corner-bl{-moz-border-radius-bottomleft:2px;-webkit-border-bottom-left-radius:2px;-khtml-border-bottom-left-radius:2px;border-bottom-left-radius:2px}.ui-corner-all,.ui-corner-bottom,.ui-corner-right,.ui-corner-br{-moz-border-radius-bottomright:2px;-webkit-border-bottom-right-radius:2px;-khtml-border-bottom-right-radius:2px;border-bottom-right-radius:2px}.ui-widget-overlay{background:#eee url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-bg_flat_0_eeeeee_40x100.png) 50% 50% repeat-x;opacity:.8;filter:Alpha(Opacity=80)}.ui-widget-shadow{margin:-4px 0 0 -4px;padding:4px;background:#aaa url(/addins/jquery/ui/v1.9.1/themes/flick/images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;opacity:.6;filter:Alpha(Opacity=60);-moz-border-radius:0;-khtml-border-radius:0;-webkit-border-radius:0;border-radius:0}.pln{color:#000}@media
+screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}pre.prettyprint{padding:2px}ol.linenums{margin-top:0;margin-bottom:0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}.profiler-results{position:fixed;left:0px;top:0px;color:#696969;z-index:990000}.profiler-result{}.profiler-button{background-color:#fff;height:24px;width:60px;display:block;border:1px
+solid #ccc;border-width:1px 0px;margin-bottom:1px;text-align:center;line-height:24px;cursor:pointer}.profiler-button-active{background-color:#800000;color:#fff}.profiler-popup{position:fixed;left:60px;top:0px;border:1px
+solid #ccc;padding:8px;display:none;background-color:#fff;max-width:1100px;min-width:800px}.profiler-info{border-bottom:1px solid #ccc;font-weight:bold}.profiler-tabs{padding-left:24px;border-bottom:1px solid #c98383}.profiler-tabbutton{display:inline-block;width:80px;line-height:24px;cursor:pointer;text-align:center;margin:4px
+4px 0 4px}.profiler-tabbutton-active{background-color:#c98383;color:#fff}.profiler-tabbody{display:none;overflow:auto;max-height:600px;min-height:300px}.profiler-tabbody-trace{display:block}.profiler-tabbody pre{display:block;overflow:visible;margin:0;padding:0px}.profiler-tabbody dt{background-color:#faefef;font-size:12px;font-family:Consolas,monospace,serif;line-height:14px;white-space:pre-wrap;margin:8px
+0 0 0;padding:0px;padding:4px;cursor:pointer}.profiler-tabbody dd{padding-top:4px;display:none;padding-left:8px;font-size:11px;font-family:Consolas,monospace,serif;line-height:13px;margin-bottom:16px;color:#393939}.profiler-trace-types{padding-top:8px}.profiler-trace-types span{display:inline-block;width:100px;height:24px;line-height:24px;text-align:center;margin:0px 4px;cursor:pointer}.profiler-trace-type-active{background-color:#faefef;color:#800000}.profiler-header strong{width:40px;text-align:right;padding:4px 4px;background-color:#f8b02f;display:inline-block;font-size:11px;line-height:15px}.profiler-watch-item{overflow:hidden;margin-bottom:3px}.profiler-watch-item strong{width:40px;text-align:right;padding:2px 4px;background-color:#f8e4c0;display:block;float:left;font-size:11px;line-height:17px}.profiler-watch-item span{display:block;background-color:#f3dfdf;cursor:pointer;margin-left:50px;padding:2px 14px}.profiler-watch-item pre{font-size:11px;font-family:Consolas,monospace serif;line-height:13px;color:#393939;padding:2px 12px}.profiler-tabbody-request{padding:8px;line-height:16px}body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}body,button,input,select,textarea{font:12px/1.5 tahoma, arial,"microsoft yahei",simsun,sans-serif;color:#333}a{color:#333}h1,h2,h3,h4,h5,h6{font-size:100%}address,cite,dfn,em,var{font-style:normal}code,kbd,pre,samp{font-family:courier new,courier,monospace}small{font-size:12px}ul,ol{list-style:none}a{text-decoration:none}a:hover{text-decoration:underline}sup{vertical-align:text-top}sub{vertical-align:text-bottom}legend{color:#000}fieldset,img{border:0}button,input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{display:block;margin:0;padding:0}mark{background:#ff0}.wrapper-hd{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-moz-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-o-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}.header .h-nav i,.u-nav .u-nav-btn i,.login-sm .login-sm-checkbox i,.udialog .ui-dialog-titlebar .ui-dialog-titlebar-close span.ui-icon-closethick,.u-msg .u-msg-bd .u-msg-notice,.u-phone .u-phone-r i,.u-nav-login
+i{background:url("/yddx/images/yddx_base_ico.png?v=2015110910") no-repeat}:root .ui-widget-overlay{filter:none;background:rgba(0,0,0,0.5)}.clearfix,.wrapper,.wrapper-sm,.header,.hd{*zoom:1}.clearfix:after,.wrapper:after,.wrapper-sm:after,.header:after,.hd:after{content:'';height:0;visibility:hidden;display:block;clear:both}.fl{float:left}.fr{float:right}.light{color:#e33e2b !important}ins{text-decoration:none}.wrapper{width:1200px;margin:0
+auto}.wrapper-sm{width:760px;margin:0 auto}.wrapper-hd{font:20px/34px "microsoft yahei";color:#333;padding:13px 20px;border-bottom:1px solid #e5e5e5;position:relative}.header{z-index:10;position:relative}.header .h-md-logo{height:60px;}.header .h-md-nav{height:49px;border-color:#e9e9e9;border-style:solid;border-width:1px 0;background:#f5f5f5}.header h1{float:left;color:#fff;font-family: "Microsoft YaHei"; font-size:22px; margin:11px 0 0 0;max-width:600px;overflow:hidden}.header h1 img{height:40px;margin: 0 auto;margin: 0 12px 0 0;}.header h1 a{font:26px/40px "microsoft yahei";color:#e33e2b}.header h1 a:hover{text-decoration:none}.header .hd-fr{float:right; max-width:400px}.header .hd-fr .u-nav{float:right}.header .h-nav{float:right;margin:0 30px 0 0}.header .h-nav li{height:60px; line-height: 60px; float:left;margin:0 0 0 12px;position:relative;font:14px/60px "microsoft yahei";color:#d2d2d3}.header .h-nav li .h-nav-title{font:14px/60px "microsoft yahei";color:#eeeee9;}.header .h-nav li .h-nav-title:hover{text-decoration:none}.header .h-nav li:hover .h-nav-title{font-weight:bold;color:#fff}.header .h-nav li:hover .u-dialog{display:block}.header .h-nav i{display:inline-block;height:14px;width:13px;vertical-align:middle;margin:0 5px 0 0}.header .h-nav i.h-phone{width:9px;background-position:0  -200px}.header .h-nav i.h-book{background-position:-13px -200px}.header .h-nav i.h-msg{background-position:-26px -200px}.header .h-nav i.h-msg-new{width:6px;height:6px;margin:0 0 0 5px;background-position:-39px -200px}.header .h-nav .u-dialog{display:none;z-index:99}.header .nav{float:left;height:50px}.header .nav li{float:left;display:inline;margin:0 10px 0 0}.header .nav li a{position:relative;float:left;height:49px;padding:0 10px;font:16px/49px "microsoft yahei";border-bottom:1px solid #e9e9e9}.header .nav li a:hover{text-decoration:none;color:#e33e2b}.header .nav li.active a{color:#e33e2b;border-bottom-color:#e33e2b;font-weight:bold}.u-nav{float:left;display:inline;height:60px;margin:0 0 0 10px}.u-nav .u-nav-hd{display:block;margin:12px 0 0;border-radius:50%;overflow:hidden;position:relative;z-index:1}.u-nav .u-nav-bd{position:relative;display:none;z-index:1}.u-nav ul{position:absolute;top:19px;right:0;width:160px;padding:15px 0;background:#fff;border:1px solid #d2d2d2;overflow:hidden}.u-nav li{text-align:center}.u-nav li a{display:block;padding:8px 0;font-size:14px;font-family:"microsoft yahei";_zoom:1}.u-nav li a:hover{text-decoration:none;background:#f2f2f2;color:#e33e2b}.u-nav li span{display:block;padding:8px 0 0;font-size:14px;font-family:"microsoft yahei";_zoom:1}.u-nav li p{font:12px/36px "microsoft yahei";color:#999;text-align:center;padding:0 10px;overflow:hidden;text-overflow:ellipsis}.u-nav li.line{height:0;line-height:0;border-bottom:1px solid #d2d2d2;margin:10px 0}.inner.outer{position:absolute;right:8px;width:0;height:0;font-size:0;border-width:0 10px 10px;border-style:dashed dashed solid}.inner{top:11px;border-color:transparent transparent #fff}.inner.inner-msg{border-color:transparent transparent #f2f2f2}.outer{top:10px;border-color:transparent transparent  #d2d2d2}.u-nav .u-nav-btn{display:block;width:90px;height:28px;margin:21px 0;background:#e33e2b;border-radius:3px}.u-nav .u-nav-btn i{width:16px;height:16px;background-position:-80px -70px;margin:6px 10px 6px 16px;float:left}.u-nav .u-nav-btn span{color:#fff;font:14px/26px "microsoft yahei";float:left}.u-nav-hover .u-nav-bd{display:block}.container{min-height:600px;padding:30px 0;background:#fff}.footer{padding:35px 0 30px;background:#eeeee9;color:#777;border-top:1px solid #ccc;font-family:arial,simsun}.footer p{font:12px/26px "����";color:#777;text-align:center}.footer p em{font-family:"Arial"}.tabs li{float:left;display:inline;margin:0 20px 0 0}.tabs li.active a{color:#e33e2b;border-color:#e33e2b}.tabs a{float:left;height:28px;padding:0 10px 3px;font:16px/1.5 "microsoft yahei";color:#666;border-bottom:4px solid transparent}.tabs a:hover{color:#e33e2b;text-decoration:none}.page{overflow:hidden}.page .pagination{padding:10px 0px;overflow:hidden}.page .pagination a,.page .pagination span{padding:0px 14px;margin-right:8px;border:none;line-height:34px;float:left;background-color:#FFF;font-size:12px;font-family:"microsoft yahei";color:#666;text-align:center;box-shadow:none}.page .pagination a{text-decoration:none}.page .pagination a:hover{background-color:#d8301d;color:#FFF}.page .pagination .current{background-color:#e33e2b;color:#FFF;padding:0px 14px}.page .pagination .next{margin-right:0}.notfound{padding:30px 0;text-align:center;color:#666;font:16px/1.5 "microsoft yahei"}.mod-reverse .mod-fl{width:760px}.mod-reverse .mod-fr{width:200px;background:#fff}.mod-fl{float:left;width:200px;background:#fff}.mod-fr{float:right;width:calc(100% - 230px);}.hd{margin:0 0 20px;border-bottom:1px solid #d8d8d8}.hd h5{float:left;padding:0 0 5px 0;font:16px/1.5 "microsoft yahei";color:#e33e2b}.mod-hd,.mod-nav-hd{padding:0 0 20px;overflow:hidden;_zoom:1}.mod-hd h3,.mod-nav-hd h3{float:left;padding:0 0 0 20px;border-left:2px solid #e33e2b;font:16px/1.5 "microsoft yahei"}.mod-hd h3 a:hover .mod-nav-hd h3 a:hover{text-decoration:none;color:#e33e2b}.mod-hd.active a,.mod-nav-hd.active a{color:#e33e2b}.mod-nav{padding:0 0 20px}.mod-nav li .badge{margin:0 0 0 10px;}.mod-nav li.active a{color:#e33e2b;background:#f2f2f2}.mod-nav a{display:block;padding:10px
+0 10px 21px;font:14px/1.2 "microsoft yahei";color:#666;_zoom:1}.mod-nav a:hover{color:#e33e2b;text-decoration:none}.mod-nav s{display:inline-block;width:6px;height:6px;margin:0 0 0 15px;background:#ff8533;border-radius:50%;vertical-align:middle}.login-sm{width:260px;background:#fff}.login-sm .login-sm-item{padding:0
+0 10px;position:relative}.login-sm .login-sm-item .login-sm-label{position:absolute;top:10px;left:10px;font-size:16px;color:#909090}.login-sm .login-sm-item .login-sm-error{color:#d2753c}.login-sm .login-sm-input{border:1px
+solid #d2d2d2}.login-sm .login-sm-input input{width:238px;height:20px;padding:10px;font-size:14px;border:0;background:#fff;outline:none}.login-sm .login-sm-code .login-sm-input input{width:158px;vertical-align:middle}.login-sm .login-sm-code img{width:80px;height:40px;vertical-align:middle;cursor:pointer}.login-sm .login-sm-checkbox{float:left;font-family:simsun}.login-sm .login-sm-checkbox i{float:left;width:15px;height:16px;margin:1px
+5px 0 0;background-position:0 0}.login-sm .login-sm-checked i{background-position:-25px 0}.login-sm .login-sm-link{float:right;color:#333;font-family:simsun;text-decoration:underline}.udialog{padding:0;background:#fff;border-radius:0}.udialog .ui-dialog-titlebar .ui-dialog-titlebar-close{top:0;right:0;width:50px;height:50px;margin:0;padding:0;color:#fff;opacity:1;border-radius:0}.udialog .ui-dialog-titlebar .ui-dialog-titlebar-close span.ui-icon-closethick{display:block;width:20px;height:20px;margin:15px
+auto;background-position:0 -40px;text-indent:-9999px}.udialog .ui-dialog-titlebar .ui-dialog-titlebar-close span.ui-icon-closethick:hover{background-position:-26px -40px}.udialog .ui-dialog-titlebar .ui-state-hover{border:0;background:none}.udialog .ui-widget-header{height:40px;padding:5px
+28px;background:#f9f9f9;font:700 16px/40px simsun;border-width:0 0 1px;border-color:#e8e7e6;border-radius:0}.udialog .ui-dialog-title{padding:0;margin:0;color:#333}.udialog .ui-dialog-content{padding:28px}.udialog .ui-dialog-buttonpane{filter:none;float:none;text-align:center;margin:0;padding:10px
+0 20px;border:0;background:#fff}.udialog .ui-dialog-buttonpane .ui-dialog-buttonset{float:none;text-align:center;margin:0;padding:0;background:#fff}.udialog .ui-dialog-buttonpane .ui-dialog-buttonset
+                                                                                                                                                    button{border-radius:3px}.udialog .ui-dialog-buttonpane .ui-dialog-buttonset .ui-button-text{padding:0;line-height:36px}.udialog .ui-dialog-buttonpane a.ui-button{margin:0
+10px;padding:0
+50px;color:#fff;font:16px/36px "microsoft yahei";background:#e33e2b;border:1px
+solid #e33e2b;outline:none}.udialog .ui-dialog-buttonpane a.ui-button:hover{background:#d8301d}.udialog .ui-dialog-buttonpane a.ui-btn-white{display:inline-block;height:36px;background:#fff;border:1px
+solid #e33e2b;text-align:center;color:#e33e2b}.udialog .ui-dialog-buttonpane a.ui-btn-white:hover{background:#e33e2b;color:#fff}.udialog .udialog-message-text{position:relative}.sys-confirm .ui-dialog-content .udialog-text,.sys-alert .ui-dialog-content .udialog-text{line-height:1.8;padding:0
+20px;font-size:16px;font-family:"microsoft yahei";text-align:center}.ui-widget-overlay{filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#6f000000', endColorstr='#6f000000')}.udialog .ui-widget-header .ui-state-hover,.udialog .ui-widget-header .ui-state-focus{background:none}.badge{width:6px;height:6px;border-radius:50%;background:#ff8533;display:inline-block;vertical-align:middle}.badge.badge-nav{position:absolute;top:6px;right:6px}.u-msg{position:absolute;top:70px;right:-30px;width:350px;background:#FFF;border:1px
+solid #e5e5e5}.u-msg .u-msg-hd{overflow:hidden;padding:0
+20px;background:#e5e5e5}.u-msg .u-msg-hd .mod-fl{width:40px;font:16px/43px "microsoft yahei";background:transparent}.u-msg .u-msg-hd
+                                                                                                                    .nav{height:43px;width:268px}.u-msg .u-msg-hd
+                                                                                                                                                 li{float:right;margin:0;padding:0}.u-msg .u-msg-hd li
+                                                                                                                                                                                   a{font:14px/42px "microsoft yahei";height:42px;color:#666}.u-msg .u-msg-bd{height:210px;overflow-x:hidden;overflow-y:auto;position:relative;background:#FFF}.u-msg .u-msg-bd .u-msg-none{padding:60px
+0 65px}.u-msg .u-msg-bd .u-msg-title{text-align:center;position:relative;margin:0
+0 20px}.u-msg .u-msg-bd .u-msg-title
+       .line{height:1px;background:#e7e7e7;top:9px;left:0;width:100%;position:absolute}.u-msg .u-msg-bd .u-msg-title
+                                                                                       h5{display:inline-block;padding:0
+13px;font:14px/20px "microsoft yahei";color:#999;background:#FFF;position:relative}.u-msg .u-msg-bd .u-msg-list{padding:20px
+25px 0}.u-msg .u-msg-bd .u-msg-list
+       li{border-bottom:1px solid #e7e7e7;margin:0
+0 10px;padding:0
+0 10px;text-align:left;width:100%;line-height:normal}.u-msg .u-msg-bd .u-msg-list li
+                                                     a{font:14px/20px "microsoft yahei";color:#333;display:inline}.u-msg .u-msg-bd .u-msg-list li a:hover{text-decoration:none;color:#e33e2b;background:transparent}.u-msg .u-msg-bd .u-msg-list li
+                                                                                                                                                                                                                    p{font:12px/20px "Arial";color:#999;text-align:left;margin:5px
+0 0}.u-msg .u-msg-bd .u-msg-list
+    li.last{border-bottom-color:transparent}.u-msg .u-msg-bd .u-msg-notice{display:block;width:44px;height:55px;margin:0
+auto 14px;background-position:-80px 0}.u-msg .u-msg-bd
+                                      p{text-align:center;font:14px/16px "microsoft yahei";color:#CCC}.u-msg .u-msg-bd.bd-lg{height:310px}.u-msg .u-msg-ft{background:#e5e5e5;text-align:center}.u-msg .u-msg-ft
+                                                                                                                                                                                                a.ft{font:14px/46px "microsoft yahei";color:#666}.u-msg .u-msg-ft a.ft:hover{text-decoration:none;color:#e33e2b}.u-msg
+                                                                                                                                                                                                                                                                                                                .outer{top:-10px;right:40px}.u-msg
+                                                                                                                                                                                                                                                                                                                                            .inner{top:-9px;right:40px;border-color:transparent transparent #e5e5e5}.u-phone{position:absolute;top:70px;right:-130px;width:258px;height:118px;padding:20px;border:1px
+solid #d2d2d2;background:#FFF;z-index:10}.u-phone
+                                         img{width:120px;height:120px;float:left;margin:0
+18px 0 0}.u-phone .u-phone-r{float:right;width:120px;overflow:hidden}.u-phone .u-phone-r
+                                                                     h5{font:16px/28px "microsoft yahei";color:#333;margin:10px
+0 4px}.u-phone-btn{display:block;font:12px/26px "microsoft yahei";height:30px;color:#FFF;background:#e33e2b;border-radius:2px;margin:10px
+0 0;padding:0
+0 0 13px}.u-phone-btn:hover{text-decoration:none;background:#e96758}.u-phone .u-phone-r
+                                                                    i{display:inline-block;width:19px;height:20px;margin:-3px 5px 0 0;vertical-align:middle}.u-phone .u-phone-r
+                                                                                                                                                            i.ios{background-position:-26px -105px}.u-phone .u-phone-r
+                                                                                                                                                                                                   i.android{background-position:-26px -135px}.u-phone
+                                                                                                                                                                                                                                              .outer{top:-10px;right:135px}.u-phone
+                                                                                                                                                                                                                                                                           .inner{top:-9px;right:135px}.u-nav-login{font:bold 12px/70px "microsoft yahei";color:#333}.u-nav-login
+                                                                                                                                                                                                                                                                                                                                                                     i{display:inline-block;width:15px;height:14px;margin:0
+5px 0 0;vertical-align:middle;background-position:0 -220px}.u-nav-login:hover{text-decoration:none;color:#e33e2b}.article
+                                                                                                                 img{max-width:100%}.article-con .article-title,.r-in-hd .r-in-text h4,.user-box .fr
+h3{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.common-promo .common-promo-bd li img,.cal-block .s-bd h3,.learning-data-list .learning-data-item
+b{display:inline-block;*vertical-align:auto;zoom:1;*display:inline}@-webkit-keyframes
+                                                                   fadeIn{0%{opacity:0}100%{opacity:1}}@-moz-keyframes
+                                                                                                       fadeIn{0%{opacity:0}100%{opacity:1}}@-o-keyframes
+                                                                                                                                           fadeIn{0%{opacity:0}100%{opacity:1}}@keyframes
+                                                                                                                                                                               fadeIn{0%{opacity:0}100%{opacity:1}}.search-wrap .search-wrap-btn i,.ico-addr,.ico-views,.ico-like,.ico-time,.ico-cmt,.ico-view,.ico-love,.ico-loved,.article-none i,.data-none i,.his-none i,.common-promo .common-promo-prev ins,.common-promo .common-promo-next ins,.notask .ico-notask,.dis-items .dis-item-main .dis-item-base em,.ui-btn-discuss i,.dis-ctrl-btns i,.addr .addr-hd i,.course-more i,.task-list .task-list-item .progress,.appendix-ico,.up,.ico,.article-share i,.article-comment .dis-nocomment i,.schema,.his-block .h-footer i,.cal-block .ico-schema,.cal-block .s-bd-items li .ico-schema-done{background:url("/yddx/images/yddx_mod_ico.png?v=2016010801") no-repeat}.uc-e .uc-e-item
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 i{background:url("/yddx/images/yddx_user_ico.png") no-repeat}:root .course-takeaway-fl li
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              p{filter:none;background:rgba(0,0,0,0.6)}:root .poi-pics
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       p{filter:none;background:rgba(0,0,0,0.6)}:root .common-promo .common-promo-num{filter:none;background:rgba(0,0,0,0.5)}.search-wrap{width:760px;margin:0
+auto 20px;overflow:hidden;display:block}.search-wrap .search-wrap-input{position:relative;float:left;width:660px;height:36px;background:#f5f5f5}.search-wrap .search-wrap-input
+                                                                                                                                                input{width:640px;height:20px;padding:8px
+10px;border:0
+none;font-size:14px;outline:none;background:transparent;-webkit-appearance:none}.search-wrap .search-wrap-input .search-wrap-holder{position:absolute;top:10px;left:10px;font:14px/1.2 "microsoft yahei";color:#999;cursor:text;user-select:none}.search-wrap .search-wrap-btn{float:left;width:100px;height:36px;font:16px/36px "microsoft yahei";background:#e33e2b;color:#fff}.search-wrap .search-wrap-btn
+                                                                                                                                                                                                                                                                                                                                                                                 i{float:left;width:17px;height:17px;margin:10px
+15px 0 18px;background-position:0 0}.search-wrap .search-wrap-btn:hover{background:#d8301d;text-decoration:none}.course-list{width:780px}.course-item{float:left;width:358px;height:100px;margin:0
+30px 15px 0;border:1px
+solid transparent;background:#fff}.course-item:hover{text-decoration:none}.course-item:hover
+                                                                          img{transform:scale(1.2)}.course-item .course-item-hd{float:left;width:153px;margin:0
+15px 0 0;overflow:hidden}.course-item .course-item-hd
+                         img{display:block;width:153px;height:100px;transition:transform 1s ease}.course-item .course-item-bd{height:99px;border-bottom:1px solid #e5e5e5;overflow:hidden;_zoom:1}.course-item .course-item-bd
+                                                                                                                                                                                                  a{display:block;max-height:40px;_height:40px;margin:0
+0 15px;font:16px/1.2 "microsoft yahei";overflow:hidden}.course-item .course-item-bd a:hover{color:#e33e2b;text-decoration:none}.course-item .course-item-bd .course-item-rate{width:100%;overflow:hidden;color:#999}.course-item .course-item-bd .course-item-rate
+                                                                                                                                                                                                                    p{float:left;width:140px;height:3px;margin:8px
+0 0;font-size:0;background:#e5e5e5}.course-item .course-item-bd .course-item-rate p
+                                   s{float:left;height:3px;background:#e33e2b}.course-item .course-item-bd .course-item-rate
+                                                                              span{padding:0
+0 0 5px}.course-item .course-item-bd .course-item-info{padding:5px
+0 0;color:#666}.course-item .course-item-bd .course-item-info
+               span{padding:0
+2px;color:#999}.course-item .course-item-bd
+               em{color:#e33e2b}.course-mod{overflow:hidden}.ui-btn,.ui-btn-nm,.ui-btn-login,.ui-btn-reg{display:inline-block;width:153px;height:36px;font:16px/36px "microsoft yahei";text-align:center;color:#fff;border:1px
+solid #e33e2b;border-radius:2px;background:#e33e2b}.ui-btn:hover,.ui-btn-nm:hover,.ui-btn-login:hover,.ui-btn-reg:hover{background:#d8301d;text-decoration:none}.ui-btn-nm{width:116px;height:32px;line-height:32px}.ui-btn-disabled{border-color:#e5e5e5;background:#e5e5e5;color:#999}.ui-btn-disabled:hover{background:#e5e5e5;color:#999}.ui-btn-white{color:#e33e2b;background:#fff}.ui-btn-white:hover{background:#e33e2b;color:#fff}.ui-btn-login{display:block;width:auto;color:#fff !important}.ui-btn-reg{display:block;width:auto;background:#FFF;color:#e33e2b !important}.ui-btn-reg:hover{background:#FFF}.plan-hd{background:#fff}.plan-hd .plan-info{padding:0;border-bottom:1px solid #eee;font:14px/1.8 "microsoft yahei"}.plan-hd .plan-info
+                                                                      h3{font:20px/1.5 "microsoft yahei"}.plan-hd .plan-alert{padding:15px
+0;color:#f60;font:14px/1.5 "microsoft yahei"}.plan-hd .plan-alert
+                                             p{overflow:hidden;word-break:break-all;word-wrap:normal}.plan-hd .plan-alert .plan-alert-tip{float:left;width:64px;height:20px;margin:0
+10px 0 0;border:1px
+solid #f60;text-align:center;border-radius:10px;font-size:12px/20px "microsoft yahei";color:#f60}.plan-info-proc{padding:5px
+0}.plan-info-proc .plan-info-proc-hd{font-size:14px;font-family:"microsoft yahei";color:#999}.plan-info-proc .plan-info-proc-hd
+                                                                                             em{padding:0
+5px}.plan-info-proc .plan-info-proc-bd{overflow:hidden}.plan-info-proc .plan-info-proc-bd .plan-info-proc-line{float:left;width:680px;height:10px;margin:3px
+0 0;background:#efefef;border-radius:5px;overflow:hidden}.plan-info-proc .plan-info-proc-bd .plan-info-proc-line
+                                                         em{float:left;height:10px;background:#e33e2b url("/yddx/images/yddx_ico_proc.png") repeat;border-radius:5px}.plan-info-proc .plan-info-proc-bd .plan-info-proc-txt{float:left;margin:0
+0 0 20px;color:#e33e2b;font:14px/1.2 arial}.plan-info-bd{margin:16px
+0 0;padding:20px;background:#f2f2f2;border:1px
+solid #e5e5e5}.plan-info-bd .plan-info-desc{font:14px/normal "microsoft yahei";color:#333;margin:0
+0 5px}.plan-info-bd .plan-info-proc .plan-info-proc-hd{margin-bottom:-4px}.plan-info-bd .plan-info-proc .plan-info-proc-bd .plan-info-proc-line{width:640px;background:#fff;border-radius:0;margin:8px
+0 0}.plan-info-bd .plan-info-proc .plan-info-proc-bd .plan-info-proc-line
+    em{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
+.plan-info-bd .plan-info-proc .plan-info-proc-bd .plan-info-proc-txt{font:12px/22px "Arial";color:#fff;background:#e3402d;padding:0 8px 0 0;position:relative;width:50px;text-indent:5px;text-align:right}
+.plan-info-bd .plan-info-proc .plan-info-proc-bd .plan-info-proc-txt .arrow-left{position:absolute;left:-10px;top:50%;margin:-3px 0 0}
+.plan-info-bd .plan-info-proc .plan-info-proc-bd .plan-info-proc-txt.gray{background:#dcdcdc}
+.plan-info-bd .plan-info-proc .plan-info-proc-bd .plan-info-proc-txt.gray .arrow-left{border-color:transparent #dcdcdc transparent transparent}.plan-info-bd .arrow-left{display:block;border-width:4px 5px;width:0;height:0;border-style:solid;border-color:transparent #e3402d transparent transparent;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px}.tasks-hd{position:relative;height:55px;border-bottom:1px solid #eee}
+.tasks-hd h4{float:left;margin:20px 0;font:16px/1.5 "microsoft yahei";color:#e33e2b}
+.tasks-hd h4.task-hd-info{color:#333}
+.tasks-hd .tabs{position:absolute;top:20px;right:0}
+.tasks-bd{padding:0 0 20px;background:#fff}
+.tasks-bd .arrow{position:relative;display:inline-block;width:0;height:0;margin:14px
+0 15px;font-size:0;border-width:10px 10px 0;border-style:solid dashed dashed;border-color:#666 transparent transparent;cursor:pointer}
+.tasks-bd .arrow ins{position:absolute;top:-12px;left:-10px;border-width:10px 10px 0;border-style:solid dashed dashed;border-color:#fff transparent transparent}
+.tasks-bd .arrow:hover{border-color:#e33e2b transparent transparent}
+.tasks-bd .task-hd{padding:0 0 15px}
+.tasks-bd .task-hd .task-hd-fl{float:left;width:620px;font:14px/1.8 "microsoft yahei"}
+.tasks-bd .task-hd .task-hd-fr{float:right;padding:0 20px 0 0;text-align:right;color:#666;font-family:"microsoft yahei"}
+.tasks-bd .task-hd .task-hd-fr b{display:block;font:24px/1.2 arial;color:#333}
+.tasks-bd .task-hd h4{font:20px/1.5 "microsoft yahei"}
+.tasks-bd .task-hd .task-info-instr{padding:10px 0 0 0;color:#999}
+.tasks-bd .task-hd .task-info-instr em{padding:0 5px 0 0}
+.tasks-bd .task-hd .task-info-instr .s{padding:0 5px}
+.tasks-bd .task-bd{position:relative;height:0;padding:0;overflow:hidden}
+.tasks-bd .task-bd .hd{position:relative;margin:0 0 10px;border-bottom:0}
+.tasks-bd .task-bd .hd h5{position:relative;padding:0 10px 0 0;font-size:14px;color:#999;background:#fff}
+.tasks-bd .task-bd .hd s{position:absolute;top:50%;left:0;width:150px;height:0;border-bottom:1px solid #e5e5e5}
+.tasks-bd .task-item{padding:35px 0 20px;border-bottom:1px solid #eee;_zoom:1}
+.tasks-bd .task-item.task-item-noborder{border-bottom:none}
+.tasks-bd .task-item-unfold .task-bd{height:auto}
+.tasks-bd .task-item-unfold .arrow{border-width:0 10px 10px;border-style:dashed dashed solid;border-color:transparent transparent #e33e2b}
+.tasks-bd .task-item-unfold .arrow ins{top:2px;border-width:0 10px 10px;border-style:dashed dashed solid;border-color:transparent transparent #fff}
+.tasks-bd .course-mod{padding:0 0 5px}
+.poi-item{height:140px;margin:0 0 20px;background:#fff;overflow:hidden}
+.poi-item .poi-item-pic{position:relative;float:left;width:210px;height:140px;margin:0 20px 0 0}
+.poi-item .poi-item-pic img{display:block;width:210px;height:140px}
+.poi-item .poi-item-pic .poi-in{position:absolute;top:0;left:0;width:64px;height:30px;font:16px/30px "microsoft yahei";color:#fff;text-align:center;background:#f89832;border-radius:0 0 15px 0}
+.poi-item .poi-item-info{height:139px;overflow:hidden;color:#999;border-bottom:1px solid #eee;font-family:"microsoft yahei"}
+.poi-item .poi-item-info h4{margin:0 0 5px}
+.poi-item .poi-item-info h4 a{display:inline-block;max-width:100%;_width:100%;font:18px/1.5 "microsoft yahei";white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.poi-item .poi-item-info h4 a:hover{text-decoration:none;color:#e33e2b}.poi-item .poi-item-info .poi-item-instr{height:65px;margin:0
+0 12px;font:14px/1.5 "microsoft yahei";overflow:hidden;word-break:break-all}.poi-item .poi-item-extra
+                                                                            li{float:left;margin:0
+30px 0 0}.ico-addr{float:left;width:10px;height:14px;margin:1px
+8px 0 0;background-position:0 -80px}.ico-views{float:left;width:17px;height:11px;margin:3px
+8px 0 0;background-position:0 -60px}.ico-like{float:left;width:13px;height:12px;margin:3px
+8px 0 0;background-position:0 -35px}.ico-time{float:left;width:12px;height:12px;margin:3px
+5px 0;background-position:-80px -450px}.ico-cmt{float:left;width:14px;height:12px;margin:3px
+5px 0;background-position:-92px -450px}.ico-view{float:left;width:16px;height:12px;margin:3px
+5px 0;background-position:-106px -450px}.ico-love{float:left;width:14px;height:12px;margin:3px
+5px 0;background-position:-122px -450px}.ico-loved{float:left;width:14px;height:12px;margin:3px
+5px 0;background-position:-136px -450px}.liked{color:#e33e2b}.liked
+                                                             i{background-position:-23px -35px}.poi-pics{height:240px;margin:0
+0 20px;overflow:hidden}.poi-pics
+                       img{display:block}.poi-pics .poi-pic-sm{position:relative;float:left;display:inline;width:120px;height:119px;margin:0
+0 2px 2px;overflow:hidden}.poi-pics .poi-pic-sm
+                          p{width:100px;padding:0
+10px}.poi-pics .poi-pic-xl{position:relative;float:left;display:inline;width:396px;height:240px;overflow:hidden}.poi-pics .poi-pic-xl
+                                                                                                                p{bottom:-50px;font-size:16px;width:356px;height:50px;padding:0
+20px;line-height:50px}.poi-pics .poi-pic-nm{position:relative;float:left;display:inline;width:180px;height:119px;margin:0
+0 2px 2px;overflow:hidden}.poi-pics .poi-pic-nm
+                          p{width:160px;padding:0
+10px}.poi-pics
+     a{position:relative;display:block;width:100%;height:100%}.poi-pics a:hover{text-decoration:none}.poi-pics a:hover
+                                                                                                     p{bottom:0;opacity:1}.poi-pics
+                                                                                                                          p{position:absolute;bottom:-30px;left:0;height:30px;text-align:right;color:#fff;font:14px/30px "microsoft yahei";white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.2;transition:bottom 200ms linear,opacity 200ms ease-in;filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#99000000',endColorstr='#99000000')}.hot-push{padding:0
+0 0 20px}.hot-push
+         li{padding:5px
+0}.hot-push
+  a{display:inline-block;max-width:100%;_width:100%;font:14px/1.5 "microsoft yahei";color:#666;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.hot-push a:hover{text-decoration:none;color:#e33e2b}.mod-con .mod-con-hd{padding:0
+0 10px;border-bottom:1px solid #e5e5e5}.mod-con .mod-con-hd
+                                       h4{padding:0
+0 10px;font:20px/1.5 "microsoft yahei"}.mod-con .mod-con-hd
+                                       li{float:left;margin:0
+40px 0 0;color:#999}.mod-con .mod-con-hd
+                    li.liked{color:#e33e2b}.mod-con .mod-con-bd{padding:30px
+0 0;font:16px/1.8 "microsoft yahei";color:#666;word-break:break-all}.course-promo{position:relative;width:760px;height:200px;margin:0
+0 20px;background:#f5f5f5;overflow:hidden}.course-promo
+                                          ul{position:absolute;top:0;left:0}.course-promo
+                                                                            li{float:left;width:760px;height:200px}.course-promo .course-promo-pic{float:left;width:300px;height:200px}.course-promo .course-promo-pic
+                                                                                                                                                                                       img{display:block;width:300px;height:200px}.course-promo .course-promo-info{float:left;width:420px;padding:20px;overflow:hidden;_zoom:1}.course-promo .course-promo-info
+                                                                                                                                                                                                                                                                                                                               h3{padding:0
+0 15px;font:24px/1.2 "microsoft yahei";white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.course-promo .course-promo-instr{margin:0
+0 10px;height:36px;overflow:hidden;color:#999}.course-promo .course-promo-gen{padding:0
+0 15px;color:#999}.course-promo .course-promo-gen
+                  em{padding:0
+5px 0 0}.course-promo .course-promo-bd{height:200px}.course-promo-ft{position:relative;width:760px;height:0;font-size:0}.course-promo-ft
+                                                                                                                        a{display:inline-block;width:4px;height:4px;line-height:0;margin:0
+0 0 8px;background:#f19e95;vertical-align:middle;border-radius:50%;overflow:hidden;cursor:default}.course-promo-ft
+                                                                                                  a.active{width:8px;height:8px;background:#e33e2b}.course-promo-ft .course-promo-num{position:absolute;bottom:25px;right:20px}.article-item{padding:0
+0 20px;margin:0
+0 20px;overflow:hidden;border-bottom:1px solid #e5e5e5;_zoom:1}.article-item .article-item-fl{float:left;width:525px}.article-item .article-item-fl h3
+                                                                                                                     a{font:16px/1.5 "microsoft yahei"}.article-item .article-item-fl h3 a:hover{text-decoration:none;color:#e33e2b}.article-item .article-item-fl h3 .appendix-ico{margin:-4px 0 0 5px;cursor:pointer}.article-item .article-item-fl
+                                                                                                                                                                                                                                                                                                                       li{margin:8px
+10px 0 0}.article-item .article-item-instr{font:12px/1.8 "microsoft yahei";color:#999}.article-item .article-item-imgs
+                                                                                      img{display:block;width:90px;height:60px}.article-item .article-item-keys
+                                                                                                                               li{height:20px;padding:0
+15px;font:12px/20px "microsoft yahei";border:1px
+solid #ff944c;text-align:center;color:#ff944c;border-radius:10px}.article-item .article-item-fr{float:right}.article-item .article-item-fr
+                                                                                                            li{margin:0
+0 0 20px;color:#999}.article-item
+                    ul{overflow:hidden;_zoom:1}.article-item ul
+                                               li{float:left}.article-item.article-item-readed .article-item-fl h3
+                                                             a{color:#999}.article-none i,.data-none i,.his-none
+i{display:block;margin:200px
+auto 30px}.article-none p,.data-none p,.his-none
+p{text-align:center;font:22px/normal "microsoft yahei";color:#999}.article-none
+                                                                  i{background-position:-400px 0;width:130px;height:138px}.data-none
+                                                                                                                          i{background-position:-550px 0;width:121px;height:136px}.his-none
+                                                                                                                                                                                  i{background-position:-550px -176px;width:70px;height:80px;margin:120px
+auto 20px}.his-none
+          p{text-align:center;font:16px/24px "microsoft yahei"}.from-party{margin:0
+0 30px;padding:30px;background:#e33e2b;border-radius:5px}.from-party .from-party-bd{padding:15px
+0;border:1px
+solid #eb786b;background:#e54a38;text-align:center;color:#f2b4af;font-family:"microsoft yahei";border-radius:5px}.from-party .from-party-bd
+                                                                                                                 strong{font:32px/1.5 arial;color:#fff}.from-party
+                                                                                                                                                       h4{padding:20px
+0 0;font:16px/1.5 "microsoft yahei";color:#fff;text-align:center}.article-con{width:760px;margin:0
+auto}.article-con .article-hd{padding:0
+0 10px;border-bottom:1px solid #e5e5e5;text-align:center;color:#999}.article-con .article-hd
+                                                                    h3{font:20px/1.5 "microsoft yahei";color:#333}.article-con .article-bd{padding:30px
+0 0;font:16px/1.8 "microsoft yahei";color:#666;overflow:hidden;word-break:break-all;word-wrap:break-word}.article-con .article-title{font:bold 16px/24px "microsoft yahei";color:#333;padding:0
+0 0 19px;border-left:2px solid #e33e2b;margin:40px
+0 0}.common-promo{padding:20px
+0}.common-promo .common-promo-bd{position:relative;width:760px;height:380px;overflow:hidden}.common-promo .common-promo-bd
+                                                                                            ul{position:absolute;top:0;left:0;height:380px}.common-promo .common-promo-bd
+                                                                                                                                           li{float:left;width:760px;height:380px;overflow:hidden;text-align:center}.common-promo .common-promo-ft{position:relative;height:0}.common-promo .common-promo-prev,.common-promo .common-promo-next{position:absolute;top:-220px;width:60px;height:60px;border-radius:5px;opacity:.2;background:#000;filter:alpha(opacity=20);cursor:pointer}.common-promo .common-promo-prev:hover,.common-promo .common-promo-next:hover{opacity:.5;filter:alpha(opacity=50)}.common-promo .common-promo-prev ins,.common-promo .common-promo-next
+ins{position:absolute;top:50%;left:50%;width:15px;height:28px;margin:-14px 0 0 -7px}.common-promo .common-promo-prev{left:20px}.common-promo .common-promo-prev
+                                                                                                                               ins{background-position:-23px 0}.common-promo .common-promo-next{right:20px}.common-promo .common-promo-next
+                                                                                                                                                                                                           ins{background-position:-38px 0}.common-promo .common-promo-num{position:absolute;top:-40px;right:0;width:80px;height:40px;line-height:40px;color:#fff;font-family:arial;text-align:center;filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#6f000000', endColorstr='#6f000000')}.common-promo .common-promo-num
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           em{padding:0
+5px 0 0;font-size:20px}.notask{padding:150px
+0;color:#999;text-align:center}.notask .notask-hd
+                               h4{padding:20px
+0 0;font:20px/1.5 "microsoft yahei"}.notask .notask-bd{padding:45px
+0 0}.notask .notask-bd
+    p{padding:0
+0 20px;font:16px/1.5 "microsoft yahei"}.notask .ico-notask{display:inline-block;width:131px;height:131px;background-position:-400px 0}.mod-frl{float:left;width:500px}.mod-frr{float:right;width:220px}.orange-box{padding:30px
+25px;background:#ff8533;border-radius:3px}.user-avatar,.user-avatar-sm,.user-avatar-xl{width:50px;height:50px;border-radius:50%;overflow:hidden}.user-avatar-sm{width:36px;height:36px}.user-avatar-xl{width:70px;height:70px}.r-ls{width:100%;font-size:12px;font-family:"microsoft yahei"}.r-ls
+                                                                                                                                                                                                                                                                                            th{font-weight:400;padding:0
+0 8px;border-bottom:1px solid #dcdcdc;text-align:left;color:#999}.r-ls th.r-ls-sec1{width:60px;padding-left:10px}.r-ls th.r-ls-sec2{width:350px}.r-ls th.r-ls-sec3{width:80px;padding-right:15px;text-align:right}.r-ls
+                                                                                                                                                                                                                  td{padding:15px
+0 10px;border-bottom:1px solid #dcdcdc}.r-ls td.r-ls-sec1{padding-left:10px}.r-ls td.r-ls-sec1
+                                                                            em{float:left;font:italic 24px/50px "microsoft yahei";color:#ccc}.r-ls td.r-ls-sec2
+                                                                                                                                             h5{width:250px;font:16px/50px "microsoft yahei";color:#666;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.r-ls td.r-ls-sec3{padding-right:15px;text-align:right;color:#e33e2b;font:20px/50px arial}.r-ls td.r-ls-sec3
+                                                                                                                                                                                                                                                                                                                                                            b{font-weight:400}.r-ls td .user-avatar,.r-ls td .user-avatar-sm,.r-ls td .user-avatar-xl{float:left;margin:0
+10px 0 0}.r-ls tr.top .r-ls-sec1
+         em{color:#e33e2b}.r-ls tr.current
+                          td{background:url("/yddx/images/yddx_user_bank.png") no-repeat;border-bottom-color:#f7c5bf}.r-ls tr.current td.r-ls-sec2{background-position:-66px 0}.r-ls tr.current td.r-ls-sec3{background-position:-408px 0}.r-in-hd{padding:0
+0 20px}.r-in-hd .user-avatar,.r-in-hd .user-avatar-sm,.r-in-hd .user-avatar-xl{float:left;margin:5px
+10px 0 0}.r-in-hd .r-in-text{overflow:hidden;font-size:16px;font-family:"microsoft yahei";color:#fff}.r-in-hd .r-in-text
+                                                                                                     em{padding:0
+5px;font:22px/1.5 arial}.r-in-hd .r-in-text
+                        h4{font-weight:400}.r-in-bd{width:160px;overflow:hidden}.r-in-bd
+                                                                                ul{width:240px;overflow:hidden}.r-in-bd
+                                                                                                               li{float:left;width:80px;margin:0
+20px 0 0;line-height:1.2;border-right:1px solid #e5772e;color:#a3521d;font-family:"microsoft yahei"}.r-in-bd li
+                                                                                                    strong{font:20px/1.5 arial;color:#fff}.r-in-bd
+                                                                                                                                          li.last{border-right:0}.r-in-span3{padding:20px}.r-in-span3 .r-in-bd{width:180px}.r-in-span3 .r-in-bd
+                                                                                                                                                                                                                           li{width:54px;margin:0
+10px 0 0}.dis-items .dis-item{display:block;padding:20px
+0 30px;border-bottom:1px solid #e5e5e5;overflow:hidden;_zoom:1}.dis-items .dis-item .user-avatar-sm{float:left;margin:0
+15px 0 0}.dis-items .dis-item .dis-item-extra .dis-ctrl-btns{display:none}.dis-items .dis-item .dis-ctrl-btn-toggle{display:none}.dis-items .dis-item:hover .dis-item-base .dis-ctrl-btns,.dis-items .dis-item:hover .dis-item-extra .dis-ctrl-btns{display:block}.dis-items .dis-item:hover .item-extra-right,.dis-items .dis-item:hover .dis-ctrl-btn-toggle{display:block}.dis-items .dis-item:hover .dis-item-intro
+                                                                                                                                                                                                                                                                                                                                                                             a{color:#e33e2b}.dis-items .dis-item-main{overflow:hidden}.dis-items .dis-item-main .dis-item-base{padding:0
+0 5px;color:#666;overflow:hidden;_zoom:1}.dis-items .dis-item-main .dis-item-base
+                                         h5{float:left;font:14px/1.5 "microsoft yahei"}.dis-items .dis-item-main .dis-item-base h5 .dis-item-date{font-size:12px;color:#999;margin:0
+0 0 15px}.dis-items .dis-item-main .dis-item-base
+         em{float:right;width:30px;height:22px;text-align:center;color:#fff;font:12px/22px arial}.dis-items .dis-item-main .dis-item-base .dis-item-pn{background-position:-80px 0}.dis-items .dis-item-main .dis-item-base .dis-item-ze{background-position:-80px -30px}.dis-items .dis-item-main .dis-item-base .ico-admin{margin:3px
+4px 0 0}.dis-items .dis-item-main .ta-lg{width:927px}.dis-items .dis-item-intro{font:14px/20px "microsoft yahei";word-break:break-all;word-wrap:normal}.dis-items .dis-item-intro
+                                                                                                                                                       p{font:14px/40px "microsoft yahei";color:#666}.dis-items .dis-item-intro
+                                                                                                                                                                                                     a{text-decoration:none}.dis-items .dis-item-intro a:hover{text-decoration:none;color:#e33e2b}.dis-items .dis-item-intro-editor{width:749px;padding:4px
+0 0}.dis-items .dis-item-intro-editor
+    textarea{width:727px;height:78px;padding:10px;border:1px
+solid #dcdcdc;font-size:16px;background:#fff;resize:none;outline:none;vertical-align:top;overflow:auto}.dis-items .dis-item-intro-editor .dis-item-intro-btns{padding:10px
+0 0;text-align:right}.dis-items .dis-item-intro-editor .dis-item-intro-btns .ui-btn-nm{margin:0
+0 0 10px}.dis-items a.dis-item-intro{display:block}.dis-items a.dis-item-intro:hover{text-decoration:none;color:#e33e2b}.dis-items .dis-item-extra{padding:8px
+0 0;color:#999;overflow:hidden}.dis-items .dis-item-extra .dis-item-date{float:left;margin-right:40px}.dis-items .dis-item-editor .dis-item-intro{display:none}.dis-items .dis-item-editor .dis-item-intro-editor{display:block}.dis-items .dis-item-editor .dis-ctrl-btns{display:block}.dis-items .dis-item-editor .dis-ctrl-btns .dis-ctrl-btn-edit{color:#e33e2b}.dis-items .dis-item-editor .dis-ctrl-btns .dis-ctrl-btn-edit
+                                                                                                                                                                                                                                                                                                                                                                     i{background-position:-22px -150px}.ui-btn-discuss{width:200px;text-align:left}.ui-btn-discuss
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    i{float:left;width:21px;height:21px;margin:8px
+24px 0 32px;background-position:-38px -60px}.dis-mod-hd{position:relative;padding:40px
+100px 50px;background:#f5f5f5}.dis-mod-hd .dis-origin{padding:0
+0 20px}.dis-mod-hd .dis-origin .user-avatar,.dis-mod-hd .dis-origin .user-avatar-sm,.dis-mod-hd .dis-origin .user-avatar-xl{float:left;margin:0
+15px 0 0}.dis-mod-hd .dis-origin .dis-origin-bd{float:left}.dis-mod-hd .dis-origin .dis-origin-bd
+                                                           span{padding:0
+10px 0 0;color:#999}.dis-mod-hd .dis-origin
+                    h4{padding:0
+0 8px;font:16px/1.5 "microsoft yahei";color:#666}.dis-mod-hd .dis-intro{font:14px/1.4 "microsoft yahei";word-break:break-all;word-wrap:normal}.dis-mod-hd .dis-ctrl{position:absolute;left:100px;bottom:0;width:800px}.dis-mod-hd .dis-ctrl .dis-ctrl-count{float:left;height:32px;padding:0
+20px;background:#fff;font:14px/32px "microsoft yahei"}.dis-mod-hd .dis-ctrl .dis-ctrl-count
+                                                      em{padding:0
+5px;color:#f19149}.dis-mod-hd .dis-intro-editor{display:none}.dis-mod-hd .dis-intro-editor
+                                                             textarea{width:778px;height:78px;padding:10px;border:1px
+solid #dcdcdc;font-size:16px;background:#fff;resize:none;outline:none;vertical-align:top;overflow:auto}.dis-mod-hd .dis-intro-editor .dis-intro-btns{padding:10px
+0 0;text-align:right}.dis-mod-hd .dis-intro-editor .dis-intro-btns .ui-btn-nm{margin:0
+0 0 10px}.dis-mod-hd
+         h3{font:16px/26px "microsoft yahei";color:#333;margin:0
+0 10px}.dis-mod-bd{padding:0
+100px;background:#fff}.dis-mod-bd .dis-item{padding:40px
+0}.dis-mod-edit{padding-bottom:30px}.dis-mod-edit .dis-intro,.dis-mod-edit .dis-ctrl-btns{display:none}.dis-mod-edit .dis-intro-editor{display:block}.dis-ctrl-btns{float:right}.dis-ctrl-btns
+                                                                                                                                                                                i{float:left;width:15px;height:15px}.dis-ctrl-btns
+                                                                                                                                                                                                                    a{float:left;margin:0
+0 0 30px;color:#999}.dis-ctrl-btns a:hover{color:#e33e2b;text-decoration:none;cursor:pointer}.dis-ctrl-btns .dis-ctrl-btn-edit
+                                                                                             i{margin:2px
+5px 0 0;background-position:0 -150px}.dis-ctrl-btns .dis-ctrl-btn-edit:hover
+                                     i{background-position:-22px -150px}.dis-ctrl-btns .dis-ctrl-btn-del
+                                                                        i{margin:3px
+5px 0 0;background-position:0 -121px}.dis-ctrl-btns .dis-ctrl-btn-del:hover
+                                     i{background-position:-22px -121px}.dis-txt-wrap{padding:70px
+0 0}.dis-txt-wrap .dis-txt-hd{padding:0
+0 10px;font-family:"microsoft yahei"}.dis-txt-wrap .dis-txt-hd
+                                     h5{float:left;font-size:16px;color:#e33e2b}.dis-txt-wrap .dis-txt-limit{float:right;color:#999}.dis-txt-wrap .dis-txt-limit
+                                                                                                                                    em{padding:0
+5px;font:italic 18px/1.5 arial}.dis-txt-wrap .dis-txt-limit
+                               em.overlimit{color:#e33e2b}.dis-txt-wrap .dis-txt-control
+                                                          textarea{width:980px;height:98px;padding:10px;background:#f5f5f5;border:1px
+solid #e5e5e5;resize:none;font-size:14px;vertical-align:top;outline:none;overflow:auto}.dis-txt-wrap .dis-txt-btn{padding:10px
+0 0;text-align:right}.dis-txt-wrap.dis-txt-wrap-md{padding:0}.dis-txt-wrap.dis-txt-wrap-md .dis-txt-control
+                                                             textarea{width:738px}.dis-txt-wrap.dis-txt-wrap-md .dis-txt-limit{float:left}.u-home-stat{font:16px/1.5 "microsoft yahei";text-align:center;color:#fff}.u-home-stat .user-avatar-xl{margin:0
+auto 20px}.u-home-stat
+          h4{padding:0
+0 15px;font-weight:400}.exp-ls
+                       li{padding:15px
+0;overflow:hidden;vertical-align:middle}.exp-ls .exp-label{float:left;width:35px;height:20px;margin:0
+10px 0 0;text-align:center;line-height:20px;color:#fff;background:#ff8533;font-family:arial;border-radius:10px}.exp-ls .exp-from{float:left;width:360px;font:14px/1.2 "microsoft yahei";color:#666}.exp-ls .exp-from
+                                                                                                                                                                                                   em{padding:0
+5px;color:#ff8533}.exp-ls .exp-date{float:right;width:80px;text-align:right;color:#999}.addr{position:relative;float:right;margin:5px
+0 0}.addr .addr-hd{color:#999}.addr .addr-hd
+                              i{float:left;width:12px;height:12px;margin:3px
+5px 0 0;background-position:0 -175px}.addr .addr-hd:hover{text-decoration:none;color:#e33e2b}.addr .addr-hd:hover
+                                                                                             i{background-position:-22px -175px}.addr .addr-bd{position:absolute;top:24px;right:0;display:none;width:285px;padding:20px
+20px 10px;border:1px
+solid #e5e5e5;background:#fff}.addr .addr-bd
+                              a{float:left;height:24px;line-height:24px;padding:0
+15px;color:#ff6539;border:1px
+solid #ff6539;border-radius:12px}.addr .addr-bd a:hover{background:#ff8533;color:#fff;text-decoration:none}.addr .addr-bd
+                                                                                                           li{float:left;padding:0
+10px 10px 0;white-space:nowrap}.addr .addr-bd li.active
+                               a{background:#ff8533;color:#fff}.addr .addr-bd
+                                                               ul{width:300px;overflow:hidden}.addr .inner,.addr
+.outer{position:absolute;right:24px;width:0;height:0;font-size:0;border-width:0 8px 8px;border-style:dashed dashed solid}.addr
+                                                                                                                         .outer{top:-8px;border-color:transparent transparent #e5e5e5}.addr
+                                                                                                                                                                                      .inner{top:-6px;border-color:transparent transparent #fff}.addr-show .addr-hd{color:#e33e2b}.addr-show .addr-hd
+                                                                                                                                                                                                                                                                                  i{background-position:-22px -175px}.addr-show .addr-bd{display:block}.dis-box{width:460px}.dis-box .dis-box-bd{position:relative}.dis-box .dis-box-bd
+                                                                                                                                                                                                                                                                                                                                                                                                                   textarea{width:438px;height:128px;padding:10px;background:#f5f5f5;border:1px
+solid #e5e5e5;resize:none;overflow:auto;outline:none;font-size:16px;vertical-align:top}.dis-box .dis-box-bd .dis-box-label{position:absolute;top:11px;left:11px;font-size:16px;color:#999}.dis-box .dis-box-ft{width:460px;padding:10px
+0 0;overflow:hidden}.dis-box .dis-box-input-limit{float:left;margin:4px
+0 0;color:#999}.dis-box .dis-box-input-limit
+               em{padding:0
+5px;font:italic 16px/1.5 arial}.dis-box
+                               .invalid{color:#e33e2b}.dis-box .dis-box-btns{float:right}.dis-box .dis-box-btns a.ui-btn-nm{color:#fff}.uc-e .uc-e-hd{padding:0
+0 40px;overflow:hidden;border-bottom:1px solid #ccc}.uc-e .uc-e-hd .user-avatar-xl{float:left;margin:0
+25px 0 0}.uc-e .uc-e-hd .uc-e-info{float:left;font-size:14px}.uc-e .uc-e-hd .uc-e-info
+                                                             h3{font-weight:400;font-size:16px}.uc-e .uc-e-hd .uc-e-info
+                                                                                               p{padding:2px
+0 0}.uc-e .uc-e-bd{position:relative;height:600px;overflow:hidden}.uc-e .uc-e-item{position:relative;float:left;width:33.33%;height:60px;margin:100px
+0 0 -1px;border-left:1px solid #ccc}.uc-e .uc-e-item
+                                    i{position:absolute;top:-25px;left:50%;width:120px;height:160px;margin:0
+0 0 -40px}.uc-e .uc-e-item .u-ico-ca{background-position:0 0}.uc-e .uc-e-item .u-ico-bk{background-position:-140px 0}.uc-e .uc-e-item .u-ico-mg{background-position:-290px 0}.uc-e .uc-e-item .u-ico-ck{background-position:-440px 0}.uc-e .uc-e-item .u-ico-ml{background-position:-580px 0}.uc-e .uc-e-item .u-ico-ne{background-position:-710px 0}.uc-e .uc-e-item
+                                                                                                                                                                                                                                                                                                                                                     p{position:absolute;bottom:-20px;left:0;width:100%;font-size:16px;text-align:center}.uc-e .uc-e-item
+                                                                                                                                                                                                                                                                                                                                                                                                                                         em{padding:0
+5px;font-size:22px;font-family:arial;color:#e33e2b}.title-red{font:20px/34px "microsoft yahei";padding:8px
+20px;color:#FFF;margin:26px
+0 0;border-radius:3px;background:#e33e2b}.task-info{margin:16px
+0 0;overflow:hidden}.task-info .info-task{font:14px/34px "microsoft yahei";color:#666}.task-info .mod-fr{width:80px}.task-info .mod-fl{width:900px}.task-title{position:relative;height:34px;margin:30px
+0 0;overflow:hidden;text-align:center}.task-title
+                                      .line{height:1px;margin:16px
+0 0;background:#e33e2b}.task-title
+                       h2{font:16px/34px "microsoft yahei";color:#e33e2b;background:#FFF;padding:0
+20px;display:inline-block}.task-title .words{margin:-18px 0 0}.course-more{border-color:#e33e2b;text-align:center;line-height:100px}
+.course-more i{float:left;width:42px;height:44px;background-position:0 -200px;margin:28px 0 0 78px}
+.course-more span{float:left;font:20px/24px "microsoft yahei";margin:38px 0 0 26px;color:#e33e2b}
+.task-list{margin:0;}
+.task-list .task-list-item{padding:10px 10px 10px 0;border-bottom:1px solid #e5e5e5;width:100%;overflow:hidden;clear:both;cursor: pointer;}
+.task-list .task-list-item .mod-fl{width:620px;overflow:hidden}.task-list .task-list-item .mod-fr{width:100px;text-align:center}
+.task-list .task-list-item .list-item-title{font:20px/34px "microsoft yahei";color:#333}
+.task-list .task-list-item .list-item-title:hover{color:#e33e2b;text-decoration:none}
+.task-list .task-list-item .item-tag{font:14px/20px "microsoft yahei";padding:0 8px;float:left;border:1px solid #ff9b29;border-radius:10px;color:#ff9b29;margin:0 5px 0 0}
+.task-list .task-list-item .list-item-subtitle{font:14px/18px "microsoft yahei";color:#666;margin:5px 0 0}
+.task-list .task-list-item .list-item-desc{font:14px/22px "microsoft yahei";color:#666;margin:7px 0 0}
+.task-list .task-list-item .major{color:#999}
+.task-list .task-list-item .major .item-tag{border-color:#e33e2b;color:#e33e2b}
+.task-list .task-list-item .elective{color:#999}
+.task-list .task-list-item.elective .item-tag{border-color:#e6538a;color:#e6538a}
+.task-list .task-list-item .list-item-status{display:inline-block}
+.task-list .task-list-item .list-item-status span{text-align:center;font:18px/34px "microsoft yahei"}
+.task-list .task-list-item .list-item-hour{display:inline-block}
+.task-list .task-list-item .list-item-hour                                                                                                            b{font:20px/34px "microsoft yahei";color:#333;text-align:center}
+.task-list .task-list-item .list-item-hour p{font:12px/34px "microsoft yahei";color:#999;text-align:center}
+.task-list .task-list-item .progress{display:block;width:50px;height:50px}
+.task-list .task-list-item .progress.progress-nb{background-position:0 -300px}
+.task-list .task-list-item .progress.progress-cor{background-position:0 -250px}
+.task-list .task-list-item .progress.progress-in{background-position:0 -350px}
+.task-list .task-list-item .progress.progress-pass{background-position:0 -400px}
+.task-list .task-list-item .progress.progress-fail{background-position:0 -450px}
+.task-list .task-list-item .item-grade{list-style:none;margin:10px 0 0}
+.task-list .task-list-item .item-grade li{float:left;font:12px/normal "microsoft yahei";color:#888;margin:0 8px 0 0}
+.task-list .task-list-item .item-grade li .red{color:#e33e2b}
+.task-list .task-list-item .item-grade li .green{color:green}
+.ring{margin:0 auto;width:79px;height:79px;border-radius:50%;background:#ff9b29;position:relative}
+.ring .ring-l,.ring .ring-r{position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%}
+.ring .ring-l i,.ring .ring-r i{
+    background:#f0f0f0;box-shadow:0 0 5px #fff;display:block;width:100%;height:100%;
+    border-radius:50%;position:absolute;top:0;left:0;-webkit-transition:transform .5s linear;
+    -moz-transition:transform .5s linear;
+    -ms-transition:transform .5s linear;-o-transition:transform .5s linear;transition:transform .5s linear}
+.ring .ring-l,.ring .ring-l i{clip:rect(0, 40px, auto, 0)}
+.ring .ring-r,.ring .ring-r i{clip:rect(0, auto, auto, 40px)}
+.ring .ring-m{width:60px;height:60px;border-radius:50%;left:10px;top:10px;background:#FFF;position:absolute;text-align:center;line-height:60px;font-size:14px;color:#ff9b29}.ring span{font-size:22px}
+.appendix-box{padding:20px 0 100px}
+.appendix-box h5{font:16px/34px "microsoft yahei";color:#666}
+.appendix-box a{font:14px/30px "microsoft yahei";color:#333}
+.appendix-box a:hover{color:#e33e2b}
+.appendix-box a:hover .appendix-ico{background-position:-17px -500px}
+.sm-date{font:16px/34px "microsoft yahei";color:#999;text-align:right}
+.appendix-ico{display:inline-block;width:17px;height:16px;vertical-align:middle;background-position:0 -500px}
+.up{display:block;position:absolute;width:38px;height:38px;left:50%;bottom:0;margin:0 0 38px 420px;cursor:pointer;background-position:0 -516px}
+.up:hover{background-position:0 -554px}
+.container-rel{position:relative}.rank-rule{margin:40px 0 0}
+.rank-rule h3{font:bold 14px/14px "microsoft yahei";color:#333}.rank-rule dl{margin:10px 0 0}
+.rank-rule dl dt,.rank-rule dl dd{display:inline-block;font:14px/24px "microsoft yahei";color:#333}
+.rank-rule dl dt{vertical-align:top}.rank-rule dl dd{width:200px}
+.item-extra-list,.item-extra-right{list-style:none;padding:0;margin:5px 0 0;overflow:hidden}
+.item-extra-list li,.item-extra-right li{float:left;margin:0 20px 0 0;height:15px;vertical-align:middle}
+.item-extra-list li span,.item-extra-right li span{float:left;font:12px/15px "microsoft yahei";color:#777}
+.item-extra-list li .split,.item-extra-right li .split{color:#e5e5e5;line-height:12px;height:12px}
+.item-extra-list li.praised span,.item-extra-right li.praised span{color:#e33e2b}
+.item-extra-list li.praised .ico-praise,.item-extra-right li.praised .ico-praise{background-position:-95px -300px}.item-extra-list li.commented span,.item-extra-right li.commented span{color:#e33e2b}.item-extra-list li.commented .ico-comment,.item-extra-right li.commented .ico-comment{background-position:-95px -285px}.item-extra-list{float:left}.item-extra-right{float:right;display:none}.item-extra-right li:hover
+                                                                                                                                                                                                                  span{color:#e33e2b}.item-extra-right li:hover .ico-remove{background-position:-130px -300px}.ico{float:left;width:15px;height:15px;vertical-align:middle;margin:0
+4px 0 0}.ico.ico-admin{background-position:-80px -200px}.ico.ico-user{background-position:-96px -200px}.ico.ico-comment{background-position:-80px -285px}.ico.ico-commented{background-position:-95px -285px}.ico.ico-praise{background-position:-80px -300px}.ico.ico-praised{background-position:-95px -300px}.ico.ico-comment2{width:17px;height:15px;background-position:-80px -335px}.ico.ico-praise2{width:16px;height:16px;background-position:-80px -350px}.ico.ico-edit{background-position:-115px -285px}.ico.ico-remove{background-position:-115px -300px}.ico.ico-like{width:14px;height:14px;background-position:-108px -250px}.ico.ico-liked{width:14px;height:14px;background-position:-80px -250px}.ico.ico-date{width:19px;height:19px;background-position:-400px -250px}.tag-stick{font:12px/20px "microsoft yahei";color:#fff;padding:0
+6px;background:#f8862a;margin:0
+4px 0 0;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;display:inline-block;vertical-align:text-bottom}.article-share{margin:50px
+0 0;padding:20px
+0 0;border-top:1px solid #dcdcdc;overflow:hidden}.article-share
+                                                 i{display:block;width:35px;height:35px;margin:0
+0 0 10px}.article-share i.share-like{width:20px;height:18px;background-position:-150px -250px;margin:8px
+0 0 14px;float:left}.article-share i.share-xinlang{background-position:-80px -400px}.article-share i.share-weixin{background-position:-115px -400px}.article-share i.share-qzone{background-position:-150px -400px}.article-share i.share-qq{background-position:-185px -400px}.article-share .share-fl{float:left;height:34px;overflow:hidden;padding:0
+15px 0 18px;border:1px
+solid #b2b2b2;-webkit-border-radius:17px;-moz-border-radius:17px;border-radius:17px}.article-share .share-fl
+                                                                                    span{font:20px/20px "Arial";color:#b2b2b2;float:left;margin:8px
+0 0}.article-share .share-fl.liked{border-color:#e33e2b}.article-share .share-fl.liked
+                                                        span{color:#e33e2b}.article-share .share-fl.liked .share-like{background-position:-130px -250px}.article-share .share-fl:hover{border-color:#e33e2b}.article-share .share-fl:hover
+                                                                                                                                                                                                            span{color:#e33e2b}.article-share .share-fr{float:right;overflow:hidden}.article-share .share-fr
+                                                                                                                                                                                                                                                                                    li{list-style:none;float:left;font:14px/35px "锟斤拷锟斤拷";color:#666}.article-comment{padding:40px
+0 60px}.article-comment .dis-txt-wrap{padding:0}.article-comment .dis-txt-wrap .dis-txt-control
+                                                textarea{width:740px}.article-comment .dis-txt-wrap .dis-txt-limit{float:left}.article-comment .dis-mod-bd{padding:0}.article-comment .dis-items .dis-item-main .ta-lg{width:687px}.article-comment .dis-res-btns{margin:10px
+0 0;float:right}.article-comment .comment-more{display:block;height:36px;background:#eee;text-align:center;font:12px/36px "microsoft yahei";color:#999}.article-comment .comment-more
+                                                                                                                                                       img{margin:0
+0 0 12px;width:12px;height:12px}.article-comment .comment-more:hover{text-decoration:none}.article-comment .dis-nocomment{padding:78px
+0}.article-comment .dis-nocomment
+  p{font:16px/22px "microsoft yahei";color:#ccc;float:left}.article-comment .dis-nocomment
+                                                           i{background-position:-50px -176px;width:20px;height:20px;float:left;margin:1px
+10px 0 320px}.dis-item-reply{position:relative;margin:20px
+0 0;background:#f5f5f5;border:1px
+solid #e5e5e5;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;padding:10px
+15px 20px;word-break:break-all}.dis-item-reply,.dis-item-reply
+span{font:14px/22px "microsoft yahei";color:#999}.dis-item-reply p.reply-name{color:#999 !important}.dis-item-reply
+                                                                                                    .outer{top:-10px;left:50px;border-color:transparent transparent #e5e5e5}.dis-item-reply
+                                                                                                                                                                            .inner{top:-9px;left:50px;border-color:transparent transparent #f5f5f5}.dis-comm-count{margin:30px
+0 0;padding:0
+0 10px;border-bottom:1px solid #ddd;overflow:hidden}.dis-comm-count .ico-comment2{margin:3px
+8px 0 0}.dis-comm-count
+        p{float:left;font:16px/22px "microsoft yahei";color:#666}.dis-ctrl-btns
+                                                                 .ico{margin:2px
+5px 0 0}.dis-ctrl-btns a:hover .ico-like{background-position:-94px -250px}.dis-ctrl-btns a:hover .ico-comment{background-position:-94px -285px}.ta-lg{width:980px;height:98px;padding:10px;background:#fff;border:1px
+solid #e5e5e5;resize:none;font-size:14px;vertical-align:top;outline:none;overflow:auto}.input-box{position:relative;border:1px
+solid #e5e5e5;padding:4px
+9px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;margin:0
+0 20px;-webkit-transition:border-color .1s linear;-moz-transition:border-color .1s linear;-ms-transition:border-color .1s linear;-o-transition:border-color .1s linear;transition:border-color .1s linear}.input-box input,.input-box
+textarea{font:14px/30px "microsoft yahei";color:#999;height:30px;border:none;outline:none;width:100%}.input-box
+                                                                                                     span{float:right;font:14px/30px "microsoft yahei";color:#999}.input-box
+                                                                                                                                                                  em{color:#e33e2b}.input-box.input-box-1{width:438px}.input-box.input-box-1
+                                                                                                                                                                                                                      input{width:360px}.input-box.input-box-2{width:980px}.input-box.input-box-2
+                                                                                                                                                                                                                                                                           input{width:90%}.focus{border-color:#ccc}.full-block{height:120px}.full-block
+                                                                                                                                                                                                                                                                                                                                             h2{float:left;font:30px/120px "microsoft yahei";color:#fff}.full-block
+                                                                                                                                                                                                                                                                                                                                                                                                        .schema{float:right}.full-block.full-study-center{background:url("banner-bg-study.png?v=2016010801") center no-repeat}.full-block.full-learning-portfolio{background:url("/yddx/images/banner-bg-portfolio.png?v=2016010801") center no-repeat;height:150px}.full-block.full-learning-portfolio
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .fl{margin:35px
+0 0}.full-block.full-learning-portfolio .learning-data-list{margin:56px
+0 0}.schema{width:200px;height:80px;float:right;margin:18px
+1px;padding:4px
+0 0;position:relative;z-index:2;background-position:-50px -500px}.schema
+                                                                 h3{font:14px/20px "Arial";color:#666;text-align:center}.schema
+                                                                                                                        .fl{margin:10px
+0 0 15px}.schema
+         span{font:14px/24px "microsoft yahei";color:#333}.schema
+                                                          p{font:12px/14px "microsoft yahei";color:#999}.schema .schema-btn{display:inline-block;width:84px;height:36px;margin:12px
+13px 0 0;float:right;font:16px/36px "microsoft yahei";color:#fff;background:#eb6100;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;text-align:center}.schema .schema-btn:hover{background:#d25600;text-decoration:none}.schema .schema-dialog-wrapper{position:absolute;right:0;top:80px;z-index:100;display:none;padding:16px
+0 0}.schema.done .schema-btn{background:#dcdcdc}.schema.done:hover .schema-dialog-wrapper{display:block}.schema-dialog{border:1px
+solid #ddd;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;overflow:hidden;background:#fff;width:698px;position:relative}.schema-dialog
+                                                                                                                                            .fl{width:289px;height:100%;border-right:1px solid #ddd;background:#eee;margin:0;float:none;left:0;top:0;position:absolute}.schema-dialog
+                                                                                                                                                                                                                                                                       .fr{width:408px;height:492px}.schema-dialog.fixed-height
+                                                                                                                                                                                                                                                                                                    .fr{height:492px}.schema-dialog.fixed-height .his-block
+                                                                                                                                                                                                                                                                                                                     li{height:48px;overflow:hidden}.his-block{padding:20px}.his-block
+                                                                                                                                                                                                                                                                                                                                                                            h4{font:16px/28px "microsoft yahei";color:#333;padding:0
+0 0 11px;border-left:2px solid #e33e2b}.his-block .h-bd{overflow-x:hidden;overflow-y:hidden;padding:0
+0 0 13px;position:absolute;left:20px;top:80px;right:20px;bottom:70px}.his-block .h-bd
+                                                                     li{margin:0
+0 20px}.his-block .h-bd li
+       a{font:14px/24px "microsoft yahei";color:#333}.his-block .h-bd li a:hover{text-decoration:none;color:#e33e2b}.his-block .h-footer{position:absolute;left:0;right:0;bottom:30px}.his-block .h-footer
+                                                                                                                                                                                      p{font:14px/24px "microsoft yahei";color:#666;text-align:center}.his-block .h-footer
+                                                                                                                                                                                                                                                      i{display:block;width:9px;height:17px;top:3px;position:absolute;cursor:pointer}.his-block .h-footer i.h-prev{background-position:-400px -176px;left:52px}.his-block .h-footer i.h-prev:hover{background-position:-418px -176px}.his-block .h-footer i.h-prev.disabled{background-position:-409px -176px}.his-block .h-footer i.h-next{background-position:-445px -176px;right:52px}.his-block .h-footer i.h-next:hover{background-position:-427px -176px}.his-block .h-footer i.h-next.disabled{background-position:-436px -176px}.cal-block{margin:26px
+32px}.cal-block .s-hd{overflow:hidden}.cal-block .s-hd
+                                      p{font:12px/22px "microsoft yahei";color:#666;float:right;width:270px;margin:0
+6px 0 0}.cal-block .ico-schema{display:block;width:40px;height:36px;background-position:-400px -200px;margin:5px
+0 0}.cal-block .s-bd{margin:28px
+0 0}.cal-block .s-bd .s-bd-title{position:relative;text-align:center}.cal-block .s-bd
+                                                                     h3{font:16px/24px "microsoft yahei";color:#666;text-align:center;position:relative;padding:0
+8px;background:#fff}.cal-block .s-bd .s-bd-line{height:1px;width:100%;position:absolute;top:50%;left:0;background:#dcdcdc}.cal-block .s-bd-items{margin:14px
+0 0;overflow:hidden}.cal-block .s-bd-items ol,.cal-block .s-bd-items
+ul{width:350px}.cal-block .s-bd-items
+               li{float:left;margin:0
+2px 2px 0}.cal-block .s-bd-items li
+          a{display:block;width:48px;height:28px;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;background:#fff;text-align:center;font:18px/28px "microsoft yahei";color:#bbb}.cal-block .s-bd-items li a:hover{text-decoration:none}.cal-block .s-bd-items li .s-bd-item{height:48px;line-height:48px;background:#f1f1f1;color:#666;position:relative}.cal-block .s-bd-items li .s-bd-item.item-disabled{background:#f8f8f8;color:#bbb}.cal-block .s-bd-items li .s-bd-item.item-done .ico-schema-done{display:block}.cal-block .s-bd-items li .s-bd-item.item-today{background:#e33e2b;color:#fff}.cal-block .s-bd-items li .ico-schema-done{position:absolute;right:0;bottom:0;width:17px;height:17px;background-position:-440px -200px;display:none}.plan-bd .search-wrap{margin:30px
+0 0}.plan-bd .tasks-bd{margin:10px
+0 0}.more,.less{font:14px/20px "microsoft yahei";color:#f60;cursor:pointer}.user-box{width:250px}.user-box
+                                                                                                 img{width:80px;height:80px;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%}.user-box
+                                                                                                                                                                                               .fr{width:150px;overflow:hidden;margin:0}.user-box .fr
+                                                                                                                                                                                                                                        h3{font:18px/38px "microsoft yahei";color:#fff}.user-box .fr
+                                                                                                                                                                                                                                                                                       p{font:12px/16px "microsoft yahei";color:#c4c5c7}.learning-data-list
+                                                                                                                                                                                                                                                                                                                                        li{float:left}.learning-data-list .learning-data-item{padding:0
+0 0 20px;margin:0
+0 0 50px;border-left:1px solid #757371}.learning-data-list .learning-data-item
+                                       b{font:bold 22px/32px "Georgia";color:#fff;margin:-10px 0 0}.learning-data-list .learning-data-item
+                                                                                                   p{font:14px/16px "microsoft yahei";color:#c4c5c7}.pf-block
+                                                                                                                                                    h1{font:bold 24px/34px "microsoft yahei";color:#333;padding:0
+0 20px;border-bottom:1px solid #e5e5e5}.pf-block .pf-title{padding:35px
+0 0}.pf-block .pf-title
+    h2{font:bold 18px/34px "microsoft yahei";color:#333}.pf-block .pf-title
+                                                        em{font-family:"Georgia";color:#e33e2b}.pf-block .pf-title
+                                                                                               a{font:14px/34px "microsoft yahei";color:#333}.pf-block .pf-title a:hover{text-decoration:none;color:#e33e2b}.pf-block .pf-bd{margin:30px
+0 0;padding:0
+0 30px;overflow:hidden}.pf-block.pf-block-even{background:#f2f2f2}.pf-plan-list{width:1040px}.pf-plan-list
+                                                                                             li{float:left}.pf-plan-item{overflow:hidden;padding:0
+0 29px;border-bottom:1px dotted #cdcdcd;margin:0
+20px 30px 0;width:500px}.pf-plan-item
+                        .fl{width:98px;height:38px;border:1px
+solid #ec6941;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;font:14px/normal "microsoft yahei";color:#ec6941;text-align:center;padding:10px
+0}.pf-plan-item
+  .fr{width:360px;height:60px}.pf-plan-item .fr
+                              p{font:16px/20px "microsoft yahei";color:#333;height:40px;overflow:hidden}.pf-plan-item .fr
+                                                                                                        a{font:16px/20px "microsoft yahei";color:#333}.pf-plan-item .fr a:hover{color:#e33e2b;text-decoration:none}.pf-plan-item .fr
+                                                                                                                                                                                                                   li{float:left;font:12px/14px "microsoft yahei";color:#999}.pf-plan-item .pf-plan-src{margin:6px
+0 0}.pf-course-list{width:1040px}.pf-course-list .course-item{background:transparent;width:480px;margin:0
+40px 30px 0;border:none}.pf-exam-item{overflow:hidden;padding:0
+0 29px;border-bottom:1px dotted #cdcdcd;margin:0
+20px 30px 0;width:500px;height:75px}.pf-exam-item
+                                    p{font:16px/20px "microsoft yahei";color:#333}.pf-exam-item
+                                                                                  a{font:16px/20px "microsoft yahei";color:#333}.pf-exam-item a:hover{color:#e33e2b;text-decoration:none}.pf-exam-item
+                                                                                                                                                                                         span{font:12px/normal "microsoft yahei";color:#666;margin:16px
+0 0;display:inline-block}.pf-exam-item
+                         .green{color:#4ca331}.pf-exam-item
+                                              .red{color:#e33e2b}.h-date{position:absolute;right:0;top:20px;font:16px/30px "microsoft yahei";color:#e33e2b}.h-date .ico-date{vertical-align:middle;display:inline-block;float:none;margin:0
+18px 0 0}.h-date
+         em{vertical-align:middle}.agr-md{width:760px;margin:0
+auto 55px}.agr-md
+          h2{font:bold 24px/34px "microsoft yahei";padding:15px
+0;border-bottom:1px solid #e5e5e5;text-align:center;color:#333}.agr-md .agr-block{margin:35px
+0 0}.agr-md .agr-block
+    h3{font:18px/normal "microsoft yahei";color:#333}.agr-md .agr-block
+                                                     p{margin:30px
+0 0;font:14px/26px "microsoft yahei";color:#333}.poi-banner{height:200px;overflow:hidden;margin:0
+0 40px;position:relative}.poi-banner .poi-banner-list{width:99999px}.poi-banner .poi-banner-list
+                                                                    li{float:left}.poi-banner
+                                                                                  a{text-decoration:none}.poi-banner a:hover{text-decoration:none}.poi-banner .poi-banner-item{overflow:hidden;background:#f5f5f5;width:760px;display:none}.poi-banner .poi-banner-item .poi-banner-img{float:left;width:300px;height:200px;margin:0
+20px 0 0;font-size:0}.poi-banner .poi-banner-item .poi-banner-info{overflow:hidden}.poi-banner .poi-banner-item .poi-banner-info
+                                                                                   h2{font:24px/34px "microsoft yahei";color:#333;max-height:68px;overflow:hidden;margin:15px
+0 0}.poi-banner .poi-banner-item .poi-banner-info
+    p{font:14px/24px "microsoft yahei";color:#999;max-height:48px;overflow:hidden;margin:10px
+0 0}.poi-banner .poi-banner-switch{position:absolute;right:30px;bottom:15px}.poi-banner .poi-banner-switch
+                                                                            li{float:left;width:6px;height:6px;background:#ec9990;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;margin:0
+0 0 4px;cursor:pointer;border:2px solid transparent;}.poi-banner .poi-banner-switch li.current{border-color:#e33e2b;background:#e33e2b}
+.header.show-web.hide-mobile,.header .hd-fr{height:60px;}
+.ly_main{width:1200px; margin: 0 auto; min-width: 1200px;height:100%;background: #fff; /*padding:0 20px;*/}
+.wrapper{padding:0 20px;}
+
+@media screen and (min-width: 1200px){
+    .container{
+        min-width: 1200px;
+    }
+}
+
+.mod-fl .mod-fl-pic{
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+    vertical-align: top;
+}
+.mod-fl .mod-fl-pic a img{
+    max-width: 180px;
+    max-height: 150px;
+}
+
+.mod-fl-info{
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+    margin-left: 16px;
+}
+
+.mar_t{
+    margin-top: 30px;
+}
+.mod-fl .mod-fl-pic{
+    min-width: 180px;
+    min-height: 100px;
+    text-align: center;
+    background: #f9f9f9;
+}
+.course-item{ cursor: pointer; }
+
+.course-fr{
+    width:calc(100% - 230px);
+    float: right;
+}
+
+/*在线学习样式*/
+.header {
+    background: #cc1c1e;
+}
+.h-md-center{
+    position: relative;
+    max-width: 1200px;
+    height:60px;
+    margin: 0 auto;
+}
+.logo_tit{
+    height:40px;
+    line-height: 40px;
+    color: #000;
+    padding:0 0 0 45px;
+    background: url("/content/images/learn.png") no-repeat 0 center;
+}
+.logo_tit p{
+    font-family: "Microsoft YaHei";
+    font-size: 22px;
+}
+.h-md-info{
+    position: absolute;
+    right: 0px;
+    height:40px;
+    line-height: 40px;
+}
+.h-md-info ul{
+    color:#fff;
+    list-style-type: none;
+}
+.h-md-info ul li{
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+    padding: 0 10px;
+}
