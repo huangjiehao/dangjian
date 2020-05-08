@@ -6,7 +6,7 @@
 const HTTP_DOMAIN = '183.6.145.106:81'; 
 //const HTTP_DOMAIN = 'gzztkj.com';
 //const HTTP_BACKEND='http://gzlt.manage.gzztkj.com:8012';
-const HTTP_BACKEND='http://172.19.0.2:81';
+const HTTP_BACKEND='http://183.6.145.106:81';
 const HTTP_NEWS = '.app.gddangjian.com'; //消息分享
 const HTTP_UPLOAD_URL = 'http://172.19.0.5:8078';
 return [

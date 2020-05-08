@@ -112,7 +112,7 @@ $(function () {
                 //  xhr.open("post", 'http://163.177.111.135:8100/uni/FileService/UploadFile', true);
                 //      xhr.open("post", 'http://10.117.156.84:8078/uni/FileService/UploadFile', true);
                //前端上传党徽的
-                xhr.open("post", 'http://172.16.129.88:8666/uni/FileService/UploadFile', true);
+                xhr.open("post", 'http://183.6.145.106:8666/uni/FileService/UploadFile', true);
 
                 // xhr.open("post", 'http://172.16.4.249:8400/uni/FileService/UploadFile', true);
                 // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8;");
